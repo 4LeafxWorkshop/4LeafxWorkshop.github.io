@@ -119,13 +119,23 @@ main {
   font-weight: 500;
 }
 
-.nav-links a {
+.nav-links a,
+.nav-links button {
   position: relative;
   padding: 6px 10px;
   border-radius: 999px;
 }
 
-.nav-links a::after {
+.nav-links button {
+  border: none;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.nav-links a::after,
+.nav-links button::after {
   content: "";
   position: absolute;
   left: 0;
@@ -140,17 +150,39 @@ main {
 
 .nav-links a:hover::after,
 .nav-links a:focus-visible::after,
-.nav-links a.active::after {
+.nav-links a.active::after,
+.nav-links button:hover::after,
+.nav-links button:focus-visible::after,
+.nav-links button.active::after {
   transform: scaleX(1);
 }
 
-.nav-links a.active {
+.nav-links a.active,
+.nav-links button.active {
   background: rgba(47, 122, 99, 0.12);
   color: var(--accent);
 }
 
 .nav-cta {
   white-space: nowrap;
+}
+
+.portal-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(47, 122, 99, 0.14);
+  color: var(--accent);
+  box-shadow: 0 10px 24px rgba(47, 122, 99, 0.18);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.portal-cta:hover,
+.portal-cta:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(47, 122, 99, 0.25);
 }
 
 .lang-toggle {
@@ -165,19 +197,19 @@ main {
 
 .lang-dropdown {
   appearance: none;
-  padding: 8px 36px 8px 14px;
+  padding: 10px 40px 10px 16px;
   border-radius: 999px;
-  border: 1px solid var(--border);
-  background: linear-gradient(135deg, #ffffff 0%, #f6efe6 100%);
+  border: 1px solid rgba(47, 122, 99, 0.25);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(246, 239, 230, 0.9) 100%);
   font-weight: 600;
   color: var(--ink);
-  box-shadow: 0 8px 18px rgba(21, 18, 13, 0.08);
+  box-shadow: 0 10px 24px rgba(21, 18, 13, 0.1);
   transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
-  background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%),
-    linear-gradient(135deg, var(--muted) 50%, transparent 50%),
+  background-image: linear-gradient(45deg, transparent 50%, rgba(47, 122, 99, 0.6) 50%),
+    linear-gradient(135deg, rgba(47, 122, 99, 0.6) 50%, transparent 50%),
     linear-gradient(to right, transparent, transparent);
-  background-position: calc(100% - 18px) calc(50% - 2px), calc(100% - 12px) calc(50% - 2px),
-    calc(100% - 40px) 50%;
+  background-position: calc(100% - 18px) calc(50% - 1px), calc(100% - 12px) calc(50% - 1px),
+    calc(100% - 42px) 50%;
   background-size: 6px 6px, 6px 6px, 1px 60%;
   background-repeat: no-repeat;
 }
@@ -211,6 +243,11 @@ main {
   gap: 48px;
   padding: clamp(48px, 8vw, 72px) 7vw 40px;
   align-items: center;
+}
+
+.hero.compact {
+  grid-template-columns: minmax(0, 1fr);
+  padding: clamp(32px, 6vw, 56px) 7vw 24px;
 }
 
 .eyebrow {
@@ -378,6 +415,7 @@ main {
 
 .section {
   padding: clamp(40px, 6vw, 56px) 7vw;
+  scroll-margin-top: 120px;
 }
 
 .section.alt {

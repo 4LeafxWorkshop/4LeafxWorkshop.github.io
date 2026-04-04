@@ -25,12 +25,24 @@
         <span class="logo-wordmark">4leafx</span>
       </div>
       <nav class="nav-links" aria-label="Primary">
-        <a href="#about" data-nav="about" data-i18n="nav.about">About</a>
-        <a href="#media" data-nav="media" data-i18n="nav.media">Media</a>
-        <a href="#studios" data-nav="studios" data-i18n="nav.studios">5dudes</a>
-        <a href="#contact" data-nav="contact" data-i18n="nav.contact">Contact</a>
+        <a href="/?section=about" data-scroll="about" data-nav="about" data-i18n="nav.about">About</a>
+        <a href="/?section=media" data-scroll="media" data-nav="media" data-i18n="nav.media">Media</a>
+        <a
+          href="/?section=studios"
+          data-scroll="studios"
+          data-nav="studios"
+          data-i18n="nav.studios"
+          >5dudes</a
+        >
+        <a
+          href="/?section=contact"
+          data-scroll="contact"
+          data-nav="contact"
+          data-i18n="nav.contact"
+          >Contact</a
+        >
       </nav>
-      <a class="button small nav-cta" href="./game-hub/" data-i18n="nav.portalCta"
+      <a class="button small nav-cta portal-cta" href="/game-hub/" data-i18n="nav.portalCta"
         >Game Portal</a
       >
       <div class="lang-select" role="group" aria-label="Language">
@@ -48,7 +60,7 @@
         <button type="button" class="lang-button" data-lang="zh-HK">繁</button>
         <button type="button" class="lang-button" data-lang="de">DE</button>
         <button type="button" class="lang-button" data-lang="es">ES</button>
-        <button type="button" class="lang-button" data-lang="zh-HK">繁</button>
+        <button type="button" class="lang-button" data-lang="ja">JA</button>
       </div>
     </header>
 
@@ -63,10 +75,10 @@
             alongside a community that helps shape what's next.
           </p>
           <div class="hero-cta">
-            <a class="button primary" href="./game-hub/" data-i18n="hero.ctaPrimary"
+            <a class="button primary" href="/game-hub/" data-i18n="hero.ctaPrimary"
               >See the games</a
             >
-            <a class="button ghost" href="#media" data-i18n="hero.ctaSecondary"
+            <a class="button ghost" href="/?section=media" data-scroll="media" data-i18n="hero.ctaSecondary"
               >Join the community</a
             >
           </div>
@@ -224,42 +236,42 @@
             <p data-i18n="prints.row1.body">
               Ready-to-ship prints, limited drops, and custom orders.
             </p>
-            <a
+            <button
               class="button small ghost is-disabled"
-              href="#"
-              aria-disabled="true"
-              tabindex="-1"
+              type="button"
+              disabled
               data-i18n="prints.row1.cta"
-              >Work in progress</a
             >
+              Work in progress
+            </button>
           </article>
           <article class="card">
             <h3 data-i18n="prints.row2.title">Print Catalog</h3>
             <p data-i18n="prints.row2.body">
               Browse all available models with color and scale options.
             </p>
-            <a
+            <button
               class="button small ghost is-disabled"
-              href="#"
-              aria-disabled="true"
-              tabindex="-1"
+              type="button"
+              disabled
               data-i18n="prints.row2.cta"
-              >Work in progress</a
             >
+              Work in progress
+            </button>
           </article>
           <article class="card">
             <h3 data-i18n="prints.row3.title">Commission Form</h3>
             <p data-i18n="prints.row3.body">
               Request custom characters, props, or display pieces.
             </p>
-            <a
+            <button
               class="button small ghost is-disabled"
-              href="#"
-              aria-disabled="true"
-              tabindex="-1"
+              type="button"
+              disabled
               data-i18n="prints.row3.cta"
-              >Work in progress</a
             >
+              Work in progress
+            </button>
           </article>
         </div>
       </section>
@@ -277,28 +289,28 @@
             <p data-i18n="studios.card1.body">
               Follow development, updates, and the roadmap for the new tower defence release.
             </p>
-            <a
+            <button
               class="button small is-disabled"
-              href="#"
-              aria-disabled="true"
-              tabindex="-1"
+              type="button"
+              disabled
               data-i18n="studios.card1.cta"
-              >Work in progress</a
             >
+              Work in progress
+            </button>
           </article>
           <article class="card">
             <h3 data-i18n="studios.card2.title">5dudes Game Portal</h3>
             <p data-i18n="studios.card2.body">
               Watch trailers, read dev notes, and join the player community.
             </p>
-            <a
+            <button
               class="button small is-disabled"
-              href="#"
-              aria-disabled="true"
-              tabindex="-1"
+              type="button"
+              disabled
               data-i18n="studios.card2.cta"
-              >Work in progress</a
             >
+              Work in progress
+            </button>
           </article>
         </div>
       </section>
@@ -330,8 +342,8 @@
     <footer class="site-footer">
       <span data-i18n="footer.note">© 2026 4leafx. Crafted with luck and focus.</span>
       <div class="footer-links">
-        <a href="#games" data-i18n="footer.games">Games</a>
-        <a href="#media" data-i18n="footer.youtube">YouTube</a>
+        <a href="/game-hub/" data-i18n="footer.games">Games</a>
+        <a href="/?section=media" data-scroll="media" data-i18n="footer.youtube">YouTube</a>
       </div>
     </footer>
     <script src="./main.js"></script>

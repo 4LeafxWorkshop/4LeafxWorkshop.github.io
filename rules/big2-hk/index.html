@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hong Kong Big Two Rules</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+TC:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="bg-orbs" aria-hidden="true">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+    </div>
+
+    <header class="site-header">
+      <div class="logo-lockup">
+        <img src="../../assets/4leafx-logo.svg" alt="4leafx logo" class="logo" />
+        <span class="logo-wordmark">4leafx</span>
+      </div>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/" data-i18n="hub.nav.home">Home</a>
+        <a class="portal-cta" href="/game-hub/" data-i18n="nav.portalCta">Game Portal</a>
+        <a href="/rules/mahjong-hk/" data-i18n="rules.nav.mahjong">Mahjong Rules</a>
+      </nav>
+      <div class="lang-select" role="group" aria-label="Language">
+        <label class="visually-hidden" for="lang-select">Language</label>
+        <select id="lang-select" class="lang-dropdown" aria-label="Language">
+          <option value="en">English</option>
+          <option value="zh-HK">繁體中文</option>
+          <option value="de">Deutsch</option>
+          <option value="es">Español</option>
+          <option value="ja">日本語</option>
+        </select>
+      </div>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" class="lang-button active" data-lang="en">EN</button>
+        <button type="button" class="lang-button" data-lang="zh-HK">繁</button>
+        <button type="button" class="lang-button" data-lang="de">DE</button>
+        <button type="button" class="lang-button" data-lang="es">ES</button>
+        <button type="button" class="lang-button" data-lang="ja">JA</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero compact">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="rules.eyebrow">Rules</p>
+          <h1 data-i18n="hub.bigTwo.rules.title">Hong Kong Big Two Rules</h1>
+          <p class="lede" data-i18n="hub.bigTwo.rules.subtitle">
+            Classic Hong Kong ranking and play order only.
+          </p>
+          <div class="hero-cta">
+            <a class="button ghost" href="/game-hub/" data-i18n="rules.backToPortal"
+              >Back to Game Portal</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2 data-i18n="rules.bigTwo.section1.title">Card order</h2>
+          <p data-i18n="rules.bigTwo.section1.subtitle">Hong Kong ranking with suit priority.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3 data-i18n="hub.bigTwo.rules.card1.title">Card order</h3>
+            <p data-i18n="hub.bigTwo.rules.card1.body">
+              Rank is 3 low to 2 high. Suit order is diamonds, clubs, hearts, spades, with the
+              2 of spades highest overall.
+            </p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="rules.bigTwo.card1.title">Opening lead</h3>
+            <p data-i18n="rules.bigTwo.card1.body">Game starts with the 3 of diamonds.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="rules.bigTwo.card2.title">Suit priority</h3>
+            <p data-i18n="rules.bigTwo.card2.body">Diamonds, clubs, hearts, spades.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="section-header">
+          <h2 data-i18n="rules.bigTwo.section2.title">Valid hands</h2>
+          <p data-i18n="rules.bigTwo.section2.subtitle">Standard Hong Kong five-card ranking.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3 data-i18n="hub.bigTwo.rules.card2.title">Valid hands</h3>
+            <p data-i18n="hub.bigTwo.rules.card2.body">
+              Singles, pairs, triples, and 5-card hands. Five-card ranking is straight, flush,
+              full house, four of a kind, straight flush.
+            </p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="rules.bigTwo.card3.title">Comparison</h3>
+            <p data-i18n="rules.bigTwo.card3.body">
+              Beat the current hand with the same number of cards.
+            </p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="rules.bigTwo.card4.title">Five-card order</h3>
+            <p data-i18n="rules.bigTwo.card4.body">
+              Straight, flush, full house, four of a kind, straight flush.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2 data-i18n="rules.bigTwo.section3.title">Play flow</h2>
+          <p data-i18n="rules.bigTwo.section3.subtitle">Passes reset the trick.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3 data-i18n="hub.bigTwo.rules.card3.title">Play flow</h3>
+            <p data-i18n="hub.bigTwo.rules.card3.body">
+              Game starts with the 3 of diamonds. Play the same number of cards and beat the
+              current hand or pass. After three passes, the trick resets.
+            </p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="rules.bigTwo.card5.title">Passing</h3>
+            <p data-i18n="rules.bigTwo.card5.body">After three passes, the trick resets.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="rules.bigTwo.card6.title">Winning</h3>
+            <p data-i18n="rules.bigTwo.card6.body">First player to shed all cards wins the round.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span data-i18n="hub.footer.note">© 2026 4leafx. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="/game-hub/" data-i18n="nav.portalCta">Game Portal</a>
+        <a href="/rules/mahjong-hk/" data-i18n="rules.nav.mahjong">Mahjong Rules</a>
+      </div>
+    </footer>
+    <script src="../../main.js"></script>
+  </body>
+</html>

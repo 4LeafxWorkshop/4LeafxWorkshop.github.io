@@ -134,6 +134,57 @@ translations.en = {
   "hub.bigTwo.rules.card3.title": "Play flow",
   "hub.bigTwo.rules.card3.body":
     "Game starts with the 3 of diamonds. Play the same number of cards and beat the current hand or pass. After three passes, the trick resets.",
+  "rules.eyebrow": "Rules",
+  "rules.backToPortal": "Back to Game Portal",
+  "rules.nav.bigTwo": "Big Two Rules",
+  "rules.nav.mahjong": "Mahjong Rules",
+  "rules.mahjong.section1.title": "Core setup",
+  "rules.mahjong.section1.subtitle":
+    "Four-player Hong Kong rules with flowers and seasons.",
+  "rules.mahjong.card1.title": "Winning hand",
+  "rules.mahjong.card2.title": "Dealer flow",
+  "rules.mahjong.section2.title": "Winning and scoring",
+  "rules.mahjong.section2.subtitle":
+    "Minimum 1 fan required under Hong Kong scoring.",
+  "rules.mahjong.card3.title": "Minimum fan",
+  "rules.mahjong.card3.body": "You must have at least 1 fan to win.",
+  "rules.mahjong.card4.title": "Fan system",
+  "rules.mahjong.card4.body": "Scoring follows the Hong Kong fan table.",
+  "rules.mahjong.card5.title": "Dealer continuation",
+  "rules.mahjong.card5.body": "Dealer keeps the seat after a win.",
+  "rules.mahjong.section3.title": "Turn flow",
+  "rules.mahjong.section3.subtitle":
+    "Draw, declare, discard with standard priority.",
+  "rules.mahjong.card6.title": "Priority",
+  "rules.mahjong.card6.body": "Win, then kong or pong, then chow.",
+  "rules.mahjong.card7.title": "Draw and discard",
+  "rules.mahjong.card7.body":
+    "Draw a tile, declare a meld if applicable, then discard.",
+  "rules.mahjong.card8.title": "Rounds",
+  "rules.mahjong.card8.body":
+    "Rounds rotate by wind with East as the initial dealer.",
+  "rules.bigTwo.section1.title": "Card order",
+  "rules.bigTwo.section1.subtitle": "Hong Kong ranking with suit priority.",
+  "rules.bigTwo.card1.title": "Opening lead",
+  "rules.bigTwo.card1.body": "Game starts with the 3 of diamonds.",
+  "rules.bigTwo.card2.title": "Suit priority",
+  "rules.bigTwo.card2.body": "Diamonds, clubs, hearts, spades.",
+  "rules.bigTwo.section2.title": "Valid hands",
+  "rules.bigTwo.section2.subtitle":
+    "Standard Hong Kong five-card ranking.",
+  "rules.bigTwo.card3.title": "Comparison",
+  "rules.bigTwo.card3.body":
+    "Beat the current hand with the same number of cards.",
+  "rules.bigTwo.card4.title": "Five-card order",
+  "rules.bigTwo.card4.body":
+    "Straight, flush, full house, four of a kind, straight flush.",
+  "rules.bigTwo.section3.title": "Play flow",
+  "rules.bigTwo.section3.subtitle": "Passes reset the trick.",
+  "rules.bigTwo.card5.title": "Passing",
+  "rules.bigTwo.card5.body": "After three passes, the trick resets.",
+  "rules.bigTwo.card6.title": "Winning",
+  "rules.bigTwo.card6.body":
+    "First player to shed all cards wins the round.",
   "hub.bigTwo.tutorial.title": "Big Two tutorials",
   "hub.bigTwo.tutorial.subtitle": "Step-by-step guides for Traditional HK rules only.",
   "hub.bigTwo.tutorial.card1.title": "Beginner tutorial",
@@ -273,6 +324,48 @@ translations["zh-HK"] = {
   "hub.bigTwo.rules.card3.title": "出牌流程",
   "hub.bigTwo.rules.card3.body":
     "由方塊3開局。必須出相同張數並大過前一副，不出則跳過。跳過三次後重新開局。",
+  "rules.eyebrow": "規則",
+  "rules.backToPortal": "返回遊戲入口",
+  "rules.nav.bigTwo": "Big Two 規則",
+  "rules.nav.mahjong": "麻將規則",
+  "rules.mahjong.section1.title": "基本設定",
+  "rules.mahjong.section1.subtitle": "四人對戰，含花牌與季牌的香港規則。",
+  "rules.mahjong.card1.title": "和牌牌型",
+  "rules.mahjong.card2.title": "莊家流程",
+  "rules.mahjong.section2.title": "和牌與計分",
+  "rules.mahjong.section2.subtitle": "香港計分下最少1翻。",
+  "rules.mahjong.card3.title": "最低翻數",
+  "rules.mahjong.card3.body": "最少1翻才可和牌。",
+  "rules.mahjong.card4.title": "番程",
+  "rules.mahjong.card4.body": "計分依香港番程。",
+  "rules.mahjong.card5.title": "連莊",
+  "rules.mahjong.card5.body": "莊家和牌則留莊。",
+  "rules.mahjong.section3.title": "出牌流程",
+  "rules.mahjong.section3.subtitle": "依優先順序抽牌、鳴牌、打出。",
+  "rules.mahjong.card6.title": "優先順序",
+  "rules.mahjong.card6.body": "和牌、槓或碰、吃。",
+  "rules.mahjong.card7.title": "抽牌與打出",
+  "rules.mahjong.card7.body": "抽牌後可宣告合牌，然後打出。",
+  "rules.mahjong.card8.title": "圈序",
+  "rules.mahjong.card8.body": "風位輪轉，以東風為初始莊。",
+  "rules.bigTwo.section1.title": "牌序",
+  "rules.bigTwo.section1.subtitle": "香港牌序與花色優先。",
+  "rules.bigTwo.card1.title": "起手",
+  "rules.bigTwo.card1.body": "由方塊3開局。",
+  "rules.bigTwo.card2.title": "花色優先",
+  "rules.bigTwo.card2.body": "方塊、梅花、紅心、黑桃。",
+  "rules.bigTwo.section2.title": "合法牌型",
+  "rules.bigTwo.section2.subtitle": "標準香港五張牌排序。",
+  "rules.bigTwo.card3.title": "比較方式",
+  "rules.bigTwo.card3.body": "以相同張數壓過當前牌。",
+  "rules.bigTwo.card4.title": "五張排序",
+  "rules.bigTwo.card4.body": "順子、同花、葫蘆、鐵支、同花順。",
+  "rules.bigTwo.section3.title": "出牌流程",
+  "rules.bigTwo.section3.subtitle": "連續跳過會重新開局。",
+  "rules.bigTwo.card5.title": "跳過",
+  "rules.bigTwo.card5.body": "三次跳過後重新開局。",
+  "rules.bigTwo.card6.title": "勝利",
+  "rules.bigTwo.card6.body": "先出完牌者勝。",
   "hub.footer.note": "© 2026 4leafx。保留所有權利。",
   "hub.footer.home": "主頁",
   "hub.footer.mahjong": "麻將",
@@ -413,6 +506,58 @@ translations.de = {
   "hub.bigTwo.rules.card3.title": "Spielablauf",
   "hub.bigTwo.rules.card3.body":
     "Start mit der Karo 3. Spiele gleich viele Karten und überbiete oder passe. Nach drei Pässen wird neu begonnen.",
+  "rules.eyebrow": "Regeln",
+  "rules.backToPortal": "Zurück zum Spiele-Portal",
+  "rules.nav.bigTwo": "Big Two Regeln",
+  "rules.nav.mahjong": "Mahjong-Regeln",
+  "rules.mahjong.section1.title": "Grundaufbau",
+  "rules.mahjong.section1.subtitle":
+    "Vier Spieler, Hongkong-Regeln mit Blumen und Jahreszeiten.",
+  "rules.mahjong.card1.title": "Gewinnhand",
+  "rules.mahjong.card2.title": "Geberablauf",
+  "rules.mahjong.section2.title": "Gewinn und Wertung",
+  "rules.mahjong.section2.subtitle":
+    "Mindestens 1 Fan nach Hongkong-Wertung.",
+  "rules.mahjong.card3.title": "Mindest-Fan",
+  "rules.mahjong.card3.body": "Mindestens 1 Fan zum Gewinnen.",
+  "rules.mahjong.card4.title": "Fan-System",
+  "rules.mahjong.card4.body": "Wertung nach der Hongkong-Fan-Tabelle.",
+  "rules.mahjong.card5.title": "Geber bleibt",
+  "rules.mahjong.card5.body": "Der Geber bleibt nach einem Gewinn.",
+  "rules.mahjong.section3.title": "Zugablauf",
+  "rules.mahjong.section3.subtitle":
+    "Ziehen, melden, abwerfen in Reihenfolge.",
+  "rules.mahjong.card6.title": "Priorität",
+  "rules.mahjong.card6.body": "Gewinn, dann Kong oder Pong, dann Chow.",
+  "rules.mahjong.card7.title": "Ziehen und abwerfen",
+  "rules.mahjong.card7.body": "Ziehen, ggf. melden, dann abwerfen.",
+  "rules.mahjong.card8.title": "Runden",
+  "rules.mahjong.card8.body":
+    "Winde rotieren, Ost beginnt als Geber.",
+  "rules.bigTwo.section1.title": "Kartenreihenfolge",
+  "rules.bigTwo.section1.subtitle":
+    "Hongkong-Rangfolge mit Farbpriorität.",
+  "rules.bigTwo.card1.title": "Auftakt",
+  "rules.bigTwo.card1.body": "Start mit der Karo 3.",
+  "rules.bigTwo.card2.title": "Farbpriorität",
+  "rules.bigTwo.card2.body": "Karo, Kreuz, Herz, Pik.",
+  "rules.bigTwo.section2.title": "Gültige Hände",
+  "rules.bigTwo.section2.subtitle":
+    "Standard-Hongkong-Ranking für fünf Karten.",
+  "rules.bigTwo.card3.title": "Vergleich",
+  "rules.bigTwo.card3.body":
+    "Mit gleicher Kartenanzahl überbieten.",
+  "rules.bigTwo.card4.title": "Fünf-Karten-Order",
+  "rules.bigTwo.card4.body":
+    "Straight, Flush, Full House, Vierling, Straight Flush.",
+  "rules.bigTwo.section3.title": "Spielablauf",
+  "rules.bigTwo.section3.subtitle": "Pässe setzen den Stich zurück.",
+  "rules.bigTwo.card5.title": "Passen",
+  "rules.bigTwo.card5.body":
+    "Nach drei Pässen wird neu begonnen.",
+  "rules.bigTwo.card6.title": "Gewinnen",
+  "rules.bigTwo.card6.body":
+    "Wer zuerst alle Karten loswird, gewinnt.",
   "hub.footer.note": "© 2026 4leafx. Alle Rechte vorbehalten.",
   "hub.footer.home": "Start",
   "hub.footer.mahjong": "Mahjong",
@@ -550,6 +695,63 @@ translations.es = {
   "hub.bigTwo.rules.card3.title": "Flujo de juego",
   "hub.bigTwo.rules.card3.body":
     "La partida inicia con el 3 de diamantes. Juega el mismo número de cartas y supera la mano actual o pasa. Tras tres pases, se reinicia.",
+  "rules.eyebrow": "Reglas",
+  "rules.backToPortal": "Volver al Portal de Juegos",
+  "rules.nav.bigTwo": "Reglas de Big Two",
+  "rules.nav.mahjong": "Reglas de Mahjong",
+  "rules.mahjong.section1.title": "Configuración básica",
+  "rules.mahjong.section1.subtitle":
+    "Cuatro jugadores, reglas de Hong Kong con flores y estaciones.",
+  "rules.mahjong.card1.title": "Mano ganadora",
+  "rules.mahjong.card2.title": "Flujo del dealer",
+  "rules.mahjong.section2.title": "Victoria y puntuación",
+  "rules.mahjong.section2.subtitle":
+    "Mínimo 1 fan en la puntuación de Hong Kong.",
+  "rules.mahjong.card3.title": "Fan mínimo",
+  "rules.mahjong.card3.body": "Necesitas al menos 1 fan para ganar.",
+  "rules.mahjong.card4.title": "Sistema fan",
+  "rules.mahjong.card4.body":
+    "La puntuación sigue la tabla fan de Hong Kong.",
+  "rules.mahjong.card5.title": "Continuidad del dealer",
+  "rules.mahjong.card5.body":
+    "El dealer conserva el puesto si gana.",
+  "rules.mahjong.section3.title": "Flujo de turno",
+  "rules.mahjong.section3.subtitle":
+    "Robar, declarar y descartar por prioridad.",
+  "rules.mahjong.card6.title": "Prioridad",
+  "rules.mahjong.card6.body":
+    "Ganar, luego kong o pong, luego chow.",
+  "rules.mahjong.card7.title": "Robar y descartar",
+  "rules.mahjong.card7.body":
+    "Roba, declara si aplica y descarta.",
+  "rules.mahjong.card8.title": "Rondas",
+  "rules.mahjong.card8.body":
+    "Los vientos rotan con Este como dealer inicial.",
+  "rules.bigTwo.section1.title": "Orden de cartas",
+  "rules.bigTwo.section1.subtitle":
+    "Ranking de Hong Kong con prioridad de palos.",
+  "rules.bigTwo.card1.title": "Salida",
+  "rules.bigTwo.card1.body":
+    "La partida inicia con el 3 de diamantes.",
+  "rules.bigTwo.card2.title": "Prioridad de palos",
+  "rules.bigTwo.card2.body": "Diamantes, tréboles, corazones, picas.",
+  "rules.bigTwo.section2.title": "Manos válidas",
+  "rules.bigTwo.section2.subtitle":
+    "Ranking estándar de cinco cartas en Hong Kong.",
+  "rules.bigTwo.card3.title": "Comparación",
+  "rules.bigTwo.card3.body":
+    "Supera la mano actual con el mismo número de cartas.",
+  "rules.bigTwo.card4.title": "Orden de cinco cartas",
+  "rules.bigTwo.card4.body":
+    "Escalera, color, full house, póker, escalera de color.",
+  "rules.bigTwo.section3.title": "Flujo de juego",
+  "rules.bigTwo.section3.subtitle":
+    "Los pases reinician la baza.",
+  "rules.bigTwo.card5.title": "Pasar",
+  "rules.bigTwo.card5.body": "Tras tres pases, se reinicia.",
+  "rules.bigTwo.card6.title": "Victoria",
+  "rules.bigTwo.card6.body":
+    "Gana quien se quede sin cartas primero.",
   "hub.footer.note": "© 2026 4leafx. Todos los derechos reservados.",
   "hub.footer.home": "Inicio",
   "hub.footer.mahjong": "Mahjong",
@@ -685,6 +887,55 @@ translations.ja = {
   "hub.bigTwo.rules.card3.title": "進行",
   "hub.bigTwo.rules.card3.body":
     "ダイヤの3から開始。同枚数で上回るかパス。3人パスで流局し新しい場。",
+  "rules.eyebrow": "ルール",
+  "rules.backToPortal": "ゲームポータルへ戻る",
+  "rules.nav.bigTwo": "Big Two ルール",
+  "rules.nav.mahjong": "麻雀ルール",
+  "rules.mahjong.section1.title": "基本設定",
+  "rules.mahjong.section1.subtitle":
+    "4人戦、花牌と季牌を含む香港ルール。",
+  "rules.mahjong.card1.title": "和了形",
+  "rules.mahjong.card2.title": "親の流れ",
+  "rules.mahjong.section2.title": "和了と得点",
+  "rules.mahjong.section2.subtitle":
+    "香港得点で最低1翻が必要。",
+  "rules.mahjong.card3.title": "最低翻",
+  "rules.mahjong.card3.body": "和了には最低1翻が必要です。",
+  "rules.mahjong.card4.title": "翻数表",
+  "rules.mahjong.card4.body": "得点は香港の翻数表に従います。",
+  "rules.mahjong.card5.title": "連荘",
+  "rules.mahjong.card5.body": "親が和了すると連荘。",
+  "rules.mahjong.section3.title": "進行",
+  "rules.mahjong.section3.subtitle":
+    "ツモ、鳴き、打牌の優先順。",
+  "rules.mahjong.card6.title": "優先順",
+  "rules.mahjong.card6.body": "和了、次に槓・碰、最後に吃。",
+  "rules.mahjong.card7.title": "ツモと打牌",
+  "rules.mahjong.card7.body":
+    "ツモ後、鳴きがあれば宣言し打牌。",
+  "rules.mahjong.card8.title": "局進行",
+  "rules.mahjong.card8.body":
+    "風位が回り、東が最初の親。",
+  "rules.bigTwo.section1.title": "カード順位",
+  "rules.bigTwo.section1.subtitle": "香港順位とスート優先。",
+  "rules.bigTwo.card1.title": "初手",
+  "rules.bigTwo.card1.body": "ダイヤの3から開始。",
+  "rules.bigTwo.card2.title": "スート優先",
+  "rules.bigTwo.card2.body": "ダイヤ、クラブ、ハート、スペード。",
+  "rules.bigTwo.section2.title": "有効な手",
+  "rules.bigTwo.section2.subtitle": "香港の標準5枚役順位。",
+  "rules.bigTwo.card3.title": "比較",
+  "rules.bigTwo.card3.body":
+    "同枚数で上回る必要があります。",
+  "rules.bigTwo.card4.title": "5枚役順位",
+  "rules.bigTwo.card4.body":
+    "ストレート、フラッシュ、フルハウス、フォーカード、ストレートフラッシュ。",
+  "rules.bigTwo.section3.title": "進行",
+  "rules.bigTwo.section3.subtitle": "パスで流れをリセット。",
+  "rules.bigTwo.card5.title": "パス",
+  "rules.bigTwo.card5.body": "3人パスで流局し再開。",
+  "rules.bigTwo.card6.title": "勝利",
+  "rules.bigTwo.card6.body": "最初に手札をなくした人が勝ち。",
   "hub.footer.note": "© 2026 4leafx. 全著作権所有。",
   "hub.footer.home": "ホーム",
   "hub.footer.mahjong": "Mahjong",
@@ -729,7 +980,7 @@ if (langSelect) {
 }
 
 const navLinks = new Map(
-  Array.from(document.querySelectorAll(".nav-links a[data-nav]")).map((link) => [
+  Array.from(document.querySelectorAll(".nav-links [data-nav]")).map((link) => [
     link.dataset.nav,
     link,
   ])
@@ -775,6 +1026,36 @@ const setLinkTargets = () => {
   });
 };
 
+const scrollToSection = (targetId) => {
+  const section = document.getElementById(targetId);
+  if (!section) {
+    return false;
+  }
+  section.scrollIntoView({ behavior: "smooth", block: "start" });
+  setActiveNav(targetId);
+  return true;
+};
+
+const updateSectionParam = (targetId) => {
+  const url = new URL(window.location.href);
+  url.searchParams.set("section", targetId);
+  history.replaceState({}, "", url);
+};
+
+const scrollLinks = document.querySelectorAll("[data-scroll]");
+scrollLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const targetId = link.dataset.scroll;
+    if (!targetId) {
+      return;
+    }
+    if (scrollToSection(targetId)) {
+      event.preventDefault();
+      updateSectionParam(targetId);
+    }
+  });
+});
+
 const sections = document.querySelectorAll("main section[id]");
 const sectionObserver = new IntersectionObserver(
   (entries) => {
@@ -794,3 +1075,10 @@ sections.forEach((section) => sectionObserver.observe(section));
 
 applyLanguage("en");
 setLinkTargets();
+
+const initialSection = new URLSearchParams(window.location.search).get("section");
+if (initialSection) {
+  requestAnimationFrame(() => {
+    scrollToSection(initialSection);
+  });
+}
