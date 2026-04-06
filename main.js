@@ -1276,10 +1276,19 @@ Object.assign(translations["zh-HK"], {
   "rules.bigTwo.wiki.cta": "查看維基百科",
 });
 
-const langSelect = document.getElementById("lang-select");
 let langButtons = document.querySelectorAll(".lang-button");
 const i18nElements = document.querySelectorAll("[data-i18n]");
 const LANG_STORAGE_KEY = "4leafx.language";
+const langMenuButton = document.getElementById("lang-menu-button");
+const langMenuValue = document.getElementById("lang-menu-value");
+const langMenu = document.getElementById("lang-menu");
+const languageOptions = [
+  { value: "en", label: "English" },
+  { value: "zh-HK", label: "繁體中文" },
+  { value: "de", label: "Deutsch" },
+  { value: "es", label: "Español" },
+  { value: "ja", label: "日本語" },
+];
 
 document.documentElement.classList.add("js");
 
@@ -1295,16 +1304,47 @@ const getInitialLanguage = () => {
   return "en";
 };
 
-const updateLangDropdownOptions = (lang) => {
-  if (!langSelect) {
+const getLangLabel = (lang) => {
+  const match = languageOptions.find((option) => option.value === lang);
+  return match ? match.label : lang;
+};
+
+const renderLangMenu = (lang) => {
+  if (!langMenu) {
     return;
   }
-  Array.from(langSelect.options).forEach((option) => {
-    const isSelected = option.value === lang;
-    option.hidden = isSelected;
-    option.disabled = isSelected;
-  });
+  langMenu.innerHTML = "";
+  languageOptions
+    .filter((option) => option.value !== lang)
+    .forEach((option) => {
+      const item = document.createElement("li");
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "lang-menu-option";
+      button.dataset.lang = option.value;
+      button.setAttribute("role", "option");
+      button.setAttribute("tabindex", "-1");
+      button.textContent = option.label;
+      item.appendChild(button);
+      langMenu.appendChild(item);
+    });
 };
+
+const setMenuOpen = (isOpen) => {
+  if (!langMenuButton || !langMenu) {
+    return;
+  }
+  langMenuButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  langMenu.parentElement.classList.toggle("is-open", isOpen);
+  if (isOpen) {
+    const firstOption = langMenu.querySelector(".lang-menu-option");
+    if (firstOption) {
+      firstOption.focus();
+    }
+  }
+};
+
+const closeMenu = () => setMenuOpen(false);
 
 const applyLanguage = (lang) => {
   const dictionary = translations[lang] || translations.en;
@@ -1322,10 +1362,10 @@ const applyLanguage = (lang) => {
   langButtons.forEach((button) => {
     button.classList.toggle("active", button.dataset.lang === lang);
   });
-  if (langSelect) {
-    langSelect.value = lang;
+  if (langMenuValue) {
+    langMenuValue.textContent = getLangLabel(lang);
   }
-  updateLangDropdownOptions(lang);
+  renderLangMenu(lang);
   try {
     localStorage.setItem(LANG_STORAGE_KEY, lang);
   } catch {
@@ -1339,9 +1379,64 @@ langButtons.forEach((button) => {
   });
 });
 
-if (langSelect) {
-  langSelect.addEventListener("change", (event) => {
-    applyLanguage(event.target.value);
+if (langMenuButton && langMenu) {
+  langMenuButton.addEventListener("click", () => {
+    const isOpen = langMenu.parentElement.classList.contains("is-open");
+    setMenuOpen(!isOpen);
+  });
+
+  langMenuButton.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowDown" || event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      setMenuOpen(true);
+    } else if (event.key === "Escape") {
+      closeMenu();
+    }
+  });
+
+  langMenu.addEventListener("click", (event) => {
+    const target = event.target.closest(".lang-menu-option");
+    if (!target) {
+      return;
+    }
+    applyLanguage(target.dataset.lang);
+    closeMenu();
+    langMenuButton.focus();
+  });
+
+  langMenu.addEventListener("keydown", (event) => {
+    const options = Array.from(langMenu.querySelectorAll(".lang-menu-option"));
+    if (!options.length) {
+      return;
+    }
+    const currentIndex = options.indexOf(document.activeElement);
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      const nextIndex = currentIndex === -1 ? 0 : (currentIndex + 1) % options.length;
+      options[nextIndex].focus();
+    } else if (event.key === "ArrowUp") {
+      event.preventDefault();
+      const nextIndex =
+        currentIndex === -1 ? options.length - 1 : (currentIndex - 1 + options.length) % options.length;
+      options[nextIndex].focus();
+    } else if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      const active = document.activeElement;
+      if (active && active.dataset.lang) {
+        applyLanguage(active.dataset.lang);
+        closeMenu();
+        langMenuButton.focus();
+      }
+    } else if (event.key === "Escape") {
+      closeMenu();
+      langMenuButton.focus();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!langMenu.parentElement.contains(event.target)) {
+      closeMenu();
+    }
   });
 }
 

@@ -198,6 +198,80 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  position: relative;
+}
+
+.lang-menu-button {
+  appearance: none;
+  padding: 9px 40px 9px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+  color: var(--ink);
+  box-shadow: 0 10px 24px rgba(21, 18, 13, 0.08);
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+  background-image: url("/assets/chevron-down.svg");
+  background-position: calc(100% - 18px) 50%;
+  background-size: 14px 10px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.lang-menu-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(21, 18, 13, 0.12);
+}
+
+.lang-menu-button:focus-visible {
+  outline: 2px solid rgba(47, 122, 99, 0.35);
+  outline-offset: 2px;
+  border-color: rgba(47, 122, 99, 0.6);
+  box-shadow: 0 12px 24px rgba(47, 122, 99, 0.2);
+}
+
+.lang-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  min-width: 180px;
+  padding: 8px;
+  margin: 0;
+  list-style: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 6px;
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity 160ms ease, transform 160ms ease;
+  z-index: 20;
+}
+
+.lang-select.is-open .lang-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.lang-menu-option {
+  border: none;
+  background: transparent;
+  text-align: left;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font: inherit;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+.lang-menu-option:hover,
+.lang-menu-option:focus-visible {
+  background: rgba(47, 122, 99, 0.12);
+  color: var(--accent);
 }
 
 .lang-dropdown {
