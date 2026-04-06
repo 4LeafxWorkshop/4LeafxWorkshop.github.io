@@ -196,7 +196,7 @@ translations.en = {
     "Play the same number of cards and beat the current hand using rank and suit.",
   "rules.bigTwo.card5.title": "Five-card ranking",
   "rules.bigTwo.card5.body":
-    "Compare by hand type first, then the highest card in the combination.",
+    "Hand types rank: straight, flush, full house, four of a kind, straight flush.",
   "rules.bigTwo.section3.title": "Play flow",
   "rules.bigTwo.section3.subtitle": "Passes reset the trick.",
   "rules.bigTwo.card6.title": "Passing",
@@ -966,6 +966,246 @@ translations.ja = {
   "hub.footer.bigTwo": "Big Two",
 };
 
+Object.assign(translations.de, {
+  "hub.mahjong.rules.subtitle":
+    "Alte Hongkong-Regeln mit Blumen, Winden und Faan-Wertung.",
+  "hub.mahjong.rules.card1.title": "Steineset",
+  "hub.mahjong.rules.card1.body":
+    "144 Steine: Punkte, Bambus und Zeichen sowie Winde, Drachen, Blumen und Jahreszeiten.",
+  "hub.mahjong.rules.card2.title": "Geben und Plätze",
+  "hub.mahjong.rules.card2.body":
+    "Ost ist der Geber. Jeder erhält 13 Steine, der Geber startet mit 14 und wirft zuerst ab.",
+  "hub.mahjong.rules.card3.title": "Blumen und Ersatz",
+  "hub.mahjong.rules.card3.body":
+    "Blumen und Jahreszeiten werden beiseitegelegt; Ersatzstein ziehen, bevor du abwirfst.",
+  "hub.bigTwo.rules.subtitle": "Klassische Hongkong-Ränge, Kombinationen und Ablauf.",
+  "hub.bigTwo.rules.card1.title": "Rang und Farbe",
+  "hub.bigTwo.rules.card1.body":
+    "2 ist am höchsten, 3 am niedrigsten. Farben: Pik, Herz, Kreuz, Karo.",
+  "hub.bigTwo.rules.card2.title": "Gültige Hände",
+  "hub.bigTwo.rules.card2.body":
+    "Einzel, Paare, Drillinge und Fünf-Karten-Hände: Straight, Flush, Full House, Vierling, Straight Flush.",
+  "hub.bigTwo.rules.card3.title": "Ablauf",
+  "hub.bigTwo.rules.card3.body":
+    "Der Spieler mit der 3♦ eröffnet. Jede Runde muss überbieten oder passen; wenn alle passen, beginnt ein neuer Stich.",
+  "rules.mahjong.section2.subtitle":
+    "Vier Meldungen plus ein Paar mit Mindest-Faan.",
+  "rules.mahjong.card3.title": "Gewinnhand",
+  "rules.mahjong.card3.body":
+    "Gewinnen mit 14 Steinen: vier Meldungen plus ein Paar, per Zug oder Abwurf.",
+  "rules.mahjong.card4.title": "Meldungen",
+  "rules.mahjong.card4.body":
+    "Chow (Folge), Pung (Drilling) oder Kong (Vierling). Chows nur in einer Farbe.",
+  "rules.mahjong.card5.title": "Mindest-Faan",
+  "rules.mahjong.card5.body":
+    "Du brauchst das vereinbarte Minimum (oft 3 Faan), um zu gewinnen.",
+  "rules.mahjong.card6.title": "Zahlung",
+  "rules.mahjong.card6.body":
+    "Nur der Gewinner punktet; alle anderen zahlen nach dem Faan-Wert der Hand.",
+  "rules.mahjong.section3.subtitle":
+    "Ziehen, abwerfen und beanspruchen mit Hongkong-Priorität.",
+  "rules.mahjong.card7.title": "Ziehen und abwerfen",
+  "rules.mahjong.card7.body":
+    "Vom Wall ziehen, ggf. melden, dann abwerfen, um 13 Steine zu halten.",
+  "rules.mahjong.card8.title": "Priorität",
+  "rules.mahjong.card8.body":
+    "Gewinn, dann Kong, dann Pung, dann Chow (nur vom linken Spieler).",
+  "rules.mahjong.card9.title": "Kong-Ersatz",
+  "rules.mahjong.card9.body":
+    "Nach einem Kong einen Ersatzstein vom Ende des Walls ziehen und abwerfen.",
+  "rules.mahjong.card10.title": "Unterbrechungen",
+  "rules.mahjong.card10.body":
+    "Unterbrechungen durch Blumen/Jahreszeiten, Meldungen, Gewinnrufe oder Räuber-Kong.",
+  "rules.mahjong.wiki.title": "Mehr erfahren",
+  "rules.mahjong.wiki.subtitle":
+    "Siehe die Old-Hong-Kong-Regeln auf Wikipedia.",
+  "rules.mahjong.wiki.cta": "Wikipedia-Regeln lesen",
+  "rules.bigTwo.card1.title": "Deck und Geben",
+  "rules.bigTwo.card1.body":
+    "Standard-52-Karten-Deck ohne Joker. Alle Karten werden an vier Spieler verteilt.",
+  "rules.bigTwo.card2.title": "Rang und Farbe",
+  "rules.bigTwo.card2.body":
+    "2 ist am höchsten, 3 am niedrigsten. Farben: Pik, Herz, Kreuz, Karo.",
+  "rules.bigTwo.card3.title": "Eröffnung",
+  "rules.bigTwo.card3.body": "Der Stich beginnt mit der 3♦.",
+  "rules.bigTwo.card4.title": "Vergleich",
+  "rules.bigTwo.card4.body":
+    "Gleiche Kartenanzahl spielen und mit Rang/Farbe überbieten.",
+  "rules.bigTwo.card5.title": "Fünf-Karten-Rang",
+  "rules.bigTwo.card5.body":
+    "Handtypen: Straight, Flush, Full House, Vierling, Straight Flush.",
+  "rules.bigTwo.card6.title": "Passen",
+  "rules.bigTwo.card6.body":
+    "Wenn alle anderen passen, eröffnet der letzte Spieler einen neuen Stich.",
+  "rules.bigTwo.card7.title": "Sieg",
+  "rules.bigTwo.card7.body":
+    "Wer zuerst alle Karten spielt, gewinnt die Runde.",
+  "rules.bigTwo.wiki.title": "Mehr erfahren",
+  "rules.bigTwo.wiki.subtitle":
+    "Siehe die Big-Two-Regeln auf Wikipedia.",
+  "rules.bigTwo.wiki.cta": "Wikipedia-Regeln lesen",
+});
+
+Object.assign(translations.es, {
+  "hub.mahjong.rules.subtitle":
+    "Reglas clásicas de Hong Kong con flores, vientos y puntuación por faan.",
+  "hub.mahjong.rules.card1.title": "Juego de fichas",
+  "hub.mahjong.rules.card1.body":
+    "144 fichas: puntos, bambú y caracteres, además de vientos, dragones, flores y estaciones.",
+  "hub.mahjong.rules.card2.title": "Reparto y posiciones",
+  "hub.mahjong.rules.card2.body":
+    "Este es el dealer. Cada jugador recibe 13 fichas; el dealer empieza con 14 y descarta primero.",
+  "hub.mahjong.rules.card3.title": "Flores y reemplazos",
+  "hub.mahjong.rules.card3.body":
+    "Las flores y estaciones se apartan; roba una ficha de reemplazo antes de descartar.",
+  "hub.bigTwo.rules.subtitle": "Ranking, combinaciones y flujo clásicos de Hong Kong.",
+  "hub.bigTwo.rules.card1.title": "Rango y palo",
+  "hub.bigTwo.rules.card1.body":
+    "2 es la más alta, 3 la más baja. Palos: picas, corazones, tréboles, diamantes.",
+  "hub.bigTwo.rules.card2.title": "Manos válidas",
+  "hub.bigTwo.rules.card2.body":
+    "Individuales, pares, tríos y manos de cinco cartas: escalera, color, full house, póker, escalera de color.",
+  "hub.bigTwo.rules.card3.title": "Flujo de juego",
+  "hub.bigTwo.rules.card3.body":
+    "El jugador con el 3♦ abre. Cada turno debe superar o pasar; si todos pasan, inicia una nueva baza.",
+  "rules.mahjong.section2.subtitle":
+    "Cuatro combinaciones y un par, con faan mínimo.",
+  "rules.mahjong.card3.title": "Mano ganadora",
+  "rules.mahjong.card3.body":
+    "Ganas con 14 fichas: cuatro combinaciones y un par, por robo o descarte.",
+  "rules.mahjong.card4.title": "Combinaciones",
+  "rules.mahjong.card4.body":
+    "Chow (secuencia), pung (trío) o kong (póker). Los chow son solo del mismo palo.",
+  "rules.mahjong.card5.title": "Faan mínimo",
+  "rules.mahjong.card5.body":
+    "Debes alcanzar el mínimo acordado (a menudo 3 faan) para ganar.",
+  "rules.mahjong.card6.title": "Pagos",
+  "rules.mahjong.card6.body":
+    "Solo puntúa el ganador; los demás pagan según el valor faan de la mano.",
+  "rules.mahjong.section3.subtitle":
+    "Robar, descartar y reclamar con prioridad de Hong Kong.",
+  "rules.mahjong.card7.title": "Robar y descartar",
+  "rules.mahjong.card7.body":
+    "Robas del muro, declaras si procede y descartas para mantener 13 fichas.",
+  "rules.mahjong.card8.title": "Prioridad",
+  "rules.mahjong.card8.body":
+    "Victoria, luego kong, luego pung, y por último chow (solo del jugador izquierdo).",
+  "rules.mahjong.card9.title": "Reemplazo de kong",
+  "rules.mahjong.card9.body":
+    "Tras declarar kong, roba una ficha del final del muro y descarta.",
+  "rules.mahjong.card10.title": "Interrupciones",
+  "rules.mahjong.card10.body":
+    "Flores/estaciones, reclamos de combinación, llamados de victoria o robo de kong.",
+  "rules.mahjong.wiki.title": "Más información",
+  "rules.mahjong.wiki.subtitle":
+    "Consulta las reglas de Hong Kong antiguo en Wikipedia.",
+  "rules.mahjong.wiki.cta": "Ver reglas en Wikipedia",
+  "rules.bigTwo.card1.title": "Baraja y reparto",
+  "rules.bigTwo.card1.body":
+    "Baraja estándar de 52 cartas sin comodines. Se reparten todas a cuatro jugadores.",
+  "rules.bigTwo.card2.title": "Rango y palo",
+  "rules.bigTwo.card2.body":
+    "2 es la más alta, 3 la más baja. Palos: picas, corazones, tréboles, diamantes.",
+  "rules.bigTwo.card3.title": "Salida",
+  "rules.bigTwo.card3.body": "La baza empieza con el 3♦.",
+  "rules.bigTwo.card4.title": "Comparación",
+  "rules.bigTwo.card4.body":
+    "Juega el mismo número de cartas y supera por rango y palo.",
+  "rules.bigTwo.card5.title": "Ranking de cinco cartas",
+  "rules.bigTwo.card5.body":
+    "Tipos: escalera, color, full house, póker, escalera de color.",
+  "rules.bigTwo.card6.title": "Pasar",
+  "rules.bigTwo.card6.body":
+    "Si todos pasan, el último jugador inicia una nueva baza.",
+  "rules.bigTwo.card7.title": "Victoria",
+  "rules.bigTwo.card7.body":
+    "Gana quien primero se quede sin cartas.",
+  "rules.bigTwo.wiki.title": "Más información",
+  "rules.bigTwo.wiki.subtitle":
+    "Consulta las reglas de Big Two en Wikipedia.",
+  "rules.bigTwo.wiki.cta": "Ver reglas en Wikipedia",
+});
+
+Object.assign(translations.ja, {
+  "hub.mahjong.rules.subtitle":
+    "花牌・風牌を含む旧香港ルールと翻数ベースの得点。",
+  "hub.mahjong.rules.card1.title": "牌セット",
+  "hub.mahjong.rules.card1.body":
+    "144枚：筒・索(条)・萬に加え、風牌・三元牌・花牌・季節牌。",
+  "hub.mahjong.rules.card2.title": "配牌と席",
+  "hub.mahjong.rules.card2.body":
+    "東が親。各13枚、親は14枚で先に打牌。",
+  "hub.mahjong.rules.card3.title": "花牌の補充",
+  "hub.mahjong.rules.card3.body":
+    "花牌・季節牌は脇に置き、補充してから打牌。",
+  "hub.bigTwo.rules.subtitle": "香港式の順位・組み合わせ・進行。",
+  "hub.bigTwo.rules.card1.title": "順位とスート",
+  "hub.bigTwo.rules.card1.body":
+    "2が最強、3が最弱。スートはスペード、ハート、クラブ、ダイヤ。",
+  "hub.bigTwo.rules.card2.title": "有効な手",
+  "hub.bigTwo.rules.card2.body":
+    "単騎・ペア・トリプル・5枚役：ストレート、フラッシュ、フルハウス、フォーカード、ストレートフラッシュ。",
+  "hub.bigTwo.rules.card3.title": "進行",
+  "hub.bigTwo.rules.card3.body":
+    "3♦を持つ人が先手。上回るかパス、全員パスで新しい場。",
+  "rules.mahjong.section2.subtitle":
+    "4面子＋1雀頭と最低翻数が必要。",
+  "rules.mahjong.card3.title": "和了形",
+  "rules.mahjong.card3.body":
+    "14枚で和了：4面子＋1雀頭。ツモまたはロン。",
+  "rules.mahjong.card4.title": "面子の種類",
+  "rules.mahjong.card4.body":
+    "順子(チー)、刻子(ポン)、槓子(カン)。順子は同一スートのみ。",
+  "rules.mahjong.card5.title": "最低翻",
+  "rules.mahjong.card5.body":
+    "合意した最低翻数（多くは3翻）を満たす必要があります。",
+  "rules.mahjong.card6.title": "支払い",
+  "rules.mahjong.card6.body":
+    "勝者のみ得点。ほかの3人は手の翻数に応じて支払います。",
+  "rules.mahjong.section3.subtitle":
+    "摸牌・打牌・鳴きの香港式優先順。",
+  "rules.mahjong.card7.title": "摸牌と打牌",
+  "rules.mahjong.card7.body":
+    "山から摸牌し、必要なら宣言して打牌。手牌は13枚を維持。",
+  "rules.mahjong.card8.title": "優先順",
+  "rules.mahjong.card8.body":
+    "和了、次に槓、次に碰、最後に吃（左家のみ）。",
+  "rules.mahjong.card9.title": "槓後の補充",
+  "rules.mahjong.card9.body":
+    "槓を宣言したら山の末尾から補充し、打牌する。",
+  "rules.mahjong.card10.title": "中断",
+  "rules.mahjong.card10.body":
+    "花牌/季節牌、鳴き、和了、搶槓で進行が中断します。",
+  "rules.mahjong.wiki.title": "もっと詳しく",
+  "rules.mahjong.wiki.subtitle":
+    "Wikipediaの旧香港麻雀ルールを参照。",
+  "rules.mahjong.wiki.cta": "Wikipediaで読む",
+  "rules.bigTwo.card1.title": "デッキと配り",
+  "rules.bigTwo.card1.body":
+    "標準52枚（ジョーカーなし）。4人に全て配ります。",
+  "rules.bigTwo.card2.title": "順位とスート",
+  "rules.bigTwo.card2.body":
+    "2が最強、3が最弱。スートはスペード、ハート、クラブ、ダイヤ。",
+  "rules.bigTwo.card3.title": "初手",
+  "rules.bigTwo.card3.body": "3♦から開始。",
+  "rules.bigTwo.card4.title": "比較",
+  "rules.bigTwo.card4.body":
+    "同枚数で出し、順位とスートで上回る必要があります。",
+  "rules.bigTwo.card5.title": "5枚役の順位",
+  "rules.bigTwo.card5.body":
+    "役順：ストレート、フラッシュ、フルハウス、フォーカード、ストレートフラッシュ。",
+  "rules.bigTwo.card6.title": "パス",
+  "rules.bigTwo.card6.body":
+    "全員がパスすると、最後に出した人が新しい場を開始。",
+  "rules.bigTwo.card7.title": "勝利",
+  "rules.bigTwo.card7.body":
+    "最初に手札を出し切った人の勝ち。",
+  "rules.bigTwo.wiki.title": "もっと詳しく",
+  "rules.bigTwo.wiki.subtitle":
+    "WikipediaのBig Twoルールを参照。",
+  "rules.bigTwo.wiki.cta": "Wikipediaで読む",
+});
+
 Object.assign(translations["zh-HK"], {
   "hub.mahjong.rules.title": "香港麻雀規則",
   "hub.mahjong.rules.subtitle": "舊港式麻雀規則，含花牌、風牌與番數計分。",
@@ -984,7 +1224,7 @@ Object.assign(translations["zh-HK"], {
     "2最大，3最細。花色由大至細：黑桃、紅心、梅花、方塊。",
   "hub.bigTwo.rules.card2.title": "合法牌型",
   "hub.bigTwo.rules.card2.body":
-    "單張、對子、三條，以及五張牌：順子、同花、葫蘆、四條、同花順。",
+    "單張、對子、三條，以及五張牌：蛇、花、葫蘆、四條、同花順。",
   "hub.bigTwo.rules.card3.title": "出牌流程",
   "hub.bigTwo.rules.card3.body":
     "持有方塊3者先出；每手必須壓過或Pass，全部Pass後重新起手。",
@@ -1026,7 +1266,7 @@ Object.assign(translations["zh-HK"], {
   "rules.bigTwo.card4.body":
     "同張數出牌，以點數及花色壓過；五張先比牌型再比最高牌。",
   "rules.bigTwo.card5.title": "五張牌排序",
-  "rules.bigTwo.card5.body": "順子、同花、葫蘆、四條、同花順。",
+  "rules.bigTwo.card5.body": "蛇、花、葫蘆、四條、同花順。",
   "rules.bigTwo.card6.title": "Pass",
   "rules.bigTwo.card6.body": "其他三家全部Pass後，上一手玩家重新起手。",
   "rules.bigTwo.card7.title": "勝負",
