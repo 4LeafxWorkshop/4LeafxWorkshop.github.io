@@ -1279,9 +1279,14 @@ Object.assign(translations["zh-HK"], {
 let langButtons = document.querySelectorAll(".lang-button");
 const i18nElements = document.querySelectorAll("[data-i18n]");
 const LANG_STORAGE_KEY = "4leafx.language";
+const settingsButton = document.getElementById("settings-button");
+const settingsPanel = document.getElementById("settings-panel");
 const langMenuButton = document.getElementById("lang-menu-button");
 const langMenuValue = document.getElementById("lang-menu-value");
 const langMenu = document.getElementById("lang-menu");
+const themeMenuButton = document.getElementById("theme-menu-button");
+const themeMenuValue = document.getElementById("theme-menu-value");
+const themeMenu = document.getElementById("theme-menu");
 const languageOptions = [
   { value: "en", label: "English" },
   { value: "zh-HK", label: "繁體中文" },
@@ -1289,6 +1294,13 @@ const languageOptions = [
   { value: "es", label: "Español" },
   { value: "ja", label: "日本語" },
 ];
+
+const themeOptions = [
+  { value: "light", label: "Light" },
+  { value: "dark", label: "Dark" },
+];
+
+const THEME_STORAGE_KEY = "4leafx.theme";
 
 document.documentElement.classList.add("js");
 
@@ -1304,9 +1316,26 @@ const getInitialLanguage = () => {
   return "en";
 };
 
+const getInitialTheme = () => {
+  try {
+    const stored = localStorage.getItem(THEME_STORAGE_KEY);
+    if (stored && themeOptions.some((option) => option.value === stored)) {
+      return stored;
+    }
+  } catch {
+    // Ignore storage errors.
+  }
+  return "light";
+};
+
 const getLangLabel = (lang) => {
   const match = languageOptions.find((option) => option.value === lang);
   return match ? match.label : lang;
+};
+
+const getThemeLabel = (theme) => {
+  const match = themeOptions.find((option) => option.value === theme);
+  return match ? match.label : theme;
 };
 
 const renderLangMenu = (lang) => {
@@ -1330,21 +1359,64 @@ const renderLangMenu = (lang) => {
     });
 };
 
-const setMenuOpen = (isOpen) => {
+const renderThemeMenu = (theme) => {
+  if (!themeMenu) {
+    return;
+  }
+  themeMenu.innerHTML = "";
+  themeOptions
+    .filter((option) => option.value !== theme)
+    .forEach((option) => {
+      const item = document.createElement("li");
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "menu-option";
+      button.dataset.theme = option.value;
+      button.setAttribute("role", "option");
+      button.setAttribute("tabindex", "-1");
+      button.textContent = option.label;
+      item.appendChild(button);
+      themeMenu.appendChild(item);
+    });
+};
+
+const setSettingsOpen = (isOpen) => {
+  if (!settingsButton || !settingsPanel) {
+    return;
+  }
+  settingsButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  settingsPanel.parentElement.classList.toggle("is-open", isOpen);
+};
+
+const closeSettings = () => setSettingsOpen(false);
+
+const setLangMenuOpen = (isOpen) => {
   if (!langMenuButton || !langMenu) {
     return;
   }
   langMenuButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
   langMenu.parentElement.classList.toggle("is-open", isOpen);
   if (isOpen) {
-    const firstOption = langMenu.querySelector(".lang-menu-option");
+    const firstOption = langMenu.querySelector(".menu-option");
     if (firstOption) {
       firstOption.focus();
     }
   }
 };
 
-const closeMenu = () => setMenuOpen(false);
+const setThemeMenuOpen = (isOpen) => {
+  if (!themeMenuButton || !themeMenu) {
+    return;
+  }
+  themeMenuButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  themeMenu.parentElement.classList.toggle("is-open", isOpen);
+  if (isOpen) {
+    const firstOption = themeMenu.querySelector(".menu-option");
+    if (firstOption) {
+      firstOption.focus();
+    }
+  }
+};
 
 const applyLanguage = (lang) => {
   const dictionary = translations[lang] || translations.en;
@@ -1373,70 +1445,68 @@ const applyLanguage = (lang) => {
   }
 };
 
+const applyTheme = (theme) => {
+  document.documentElement.dataset.theme = theme;
+  if (themeMenuValue) {
+    themeMenuValue.textContent = getThemeLabel(theme);
+  }
+  renderThemeMenu(theme);
+  try {
+    localStorage.setItem(THEME_STORAGE_KEY, theme);
+  } catch {
+    // Ignore storage errors.
+  }
+};
 langButtons.forEach((button) => {
   button.addEventListener("click", () => {
     applyLanguage(button.dataset.lang);
   });
 });
 
+if (settingsButton && settingsPanel) {
+  settingsButton.addEventListener("click", () => {
+    const isOpen = settingsPanel.parentElement.classList.contains("is-open");
+    setSettingsOpen(!isOpen);
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!settingsPanel.parentElement.contains(event.target)) {
+      closeSettings();
+      setLangMenuOpen(false);
+      setThemeMenuOpen(false);
+    }
+  });
+}
+
 if (langMenuButton && langMenu) {
   langMenuButton.addEventListener("click", () => {
     const isOpen = langMenu.parentElement.classList.contains("is-open");
-    setMenuOpen(!isOpen);
-  });
-
-  langMenuButton.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowDown" || event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      setMenuOpen(true);
-    } else if (event.key === "Escape") {
-      closeMenu();
-    }
+    setLangMenuOpen(!isOpen);
   });
 
   langMenu.addEventListener("click", (event) => {
-    const target = event.target.closest(".lang-menu-option");
+    const target = event.target.closest(".menu-option");
     if (!target) {
       return;
     }
     applyLanguage(target.dataset.lang);
-    closeMenu();
-    langMenuButton.focus();
+    setLangMenuOpen(false);
+  });
+}
+
+if (themeMenuButton && themeMenu) {
+  themeMenuButton.addEventListener("click", () => {
+    const isOpen = themeMenu.parentElement.classList.contains("is-open");
+    setThemeMenuOpen(!isOpen);
   });
 
-  langMenu.addEventListener("keydown", (event) => {
-    const options = Array.from(langMenu.querySelectorAll(".lang-menu-option"));
-    if (!options.length) {
+  themeMenu.addEventListener("click", (event) => {
+    const target = event.target.closest(".menu-option");
+    if (!target) {
       return;
     }
-    const currentIndex = options.indexOf(document.activeElement);
-    if (event.key === "ArrowDown") {
-      event.preventDefault();
-      const nextIndex = currentIndex === -1 ? 0 : (currentIndex + 1) % options.length;
-      options[nextIndex].focus();
-    } else if (event.key === "ArrowUp") {
-      event.preventDefault();
-      const nextIndex =
-        currentIndex === -1 ? options.length - 1 : (currentIndex - 1 + options.length) % options.length;
-      options[nextIndex].focus();
-    } else if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      const active = document.activeElement;
-      if (active && active.dataset.lang) {
-        applyLanguage(active.dataset.lang);
-        closeMenu();
-        langMenuButton.focus();
-      }
-    } else if (event.key === "Escape") {
-      closeMenu();
-      langMenuButton.focus();
-    }
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!langMenu.parentElement.contains(event.target)) {
-      closeMenu();
-    }
+    applyTheme(target.dataset.theme);
+    setThemeMenuOpen(false);
   });
 }
 
@@ -1593,6 +1663,7 @@ const revealObserver = new IntersectionObserver(
 animatedSections.forEach((section) => revealObserver.observe(section));
 
 applyLanguage(getInitialLanguage());
+applyTheme(getInitialTheme());
 setLinkTargets();
 
 const initialSection = new URLSearchParams(window.location.search).get("section");
