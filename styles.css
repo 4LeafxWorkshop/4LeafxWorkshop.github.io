@@ -234,7 +234,7 @@ main {
   position: absolute;
   right: 0;
   top: calc(100% + 10px);
-  min-width: 180px;
+  min-width: 100%;
   padding: 8px;
   margin: 0;
   list-style: none;
