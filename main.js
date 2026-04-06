@@ -1487,12 +1487,55 @@ const setLinkTargets = () => {
   });
 };
 
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+let scrollAnimationId = null;
+
+const clampScrollY = (value) => {
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  return Math.min(Math.max(value, 0), Math.max(maxScroll, 0));
+};
+
+const easeOutBack = (t) => {
+  const s = 1.45;
+  const t1 = t - 1;
+  return 1 + (s + 1) * t1 * t1 * t1 + s * t1 * t1;
+};
+
+const smoothScrollTo = (targetY) => {
+  if (reduceMotion) {
+    window.scrollTo(0, clampScrollY(targetY));
+    return;
+  }
+  if (scrollAnimationId) {
+    cancelAnimationFrame(scrollAnimationId);
+  }
+  const startY = window.scrollY;
+  const delta = targetY - startY;
+  const duration = 720;
+  const startTime = performance.now();
+
+  const step = (now) => {
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = easeOutBack(progress);
+    window.scrollTo(0, clampScrollY(startY + delta * eased));
+    if (progress < 1) {
+      scrollAnimationId = requestAnimationFrame(step);
+    } else {
+      scrollAnimationId = null;
+    }
+  };
+
+  scrollAnimationId = requestAnimationFrame(step);
+};
+
 const scrollToSection = (targetId) => {
   const section = document.getElementById(targetId);
   if (!section) {
     return false;
   }
-  section.scrollIntoView({ behavior: "smooth", block: "start" });
+  const targetY = section.getBoundingClientRect().top + window.scrollY - 120;
+  smoothScrollTo(targetY);
   setActiveNav(targetId);
   return true;
 };
