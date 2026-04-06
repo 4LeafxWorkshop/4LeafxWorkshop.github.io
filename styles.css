@@ -103,9 +103,8 @@ main {
 .header-right {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   gap: 32px;
-  flex: 1;
+  margin-left: auto;
 }
 
 .header-divider {
@@ -688,12 +687,6 @@ main {
     align-items: flex-start;
   }
 
-  .header-right {
-    width: 100%;
-    justify-content: space-between;
-    gap: 16px;
-  }
-
   .nav-links {
     flex-wrap: wrap;
     gap: 16px;
@@ -707,8 +700,10 @@ main {
   }
 
   .header-right {
-    flex-direction: column;
-    align-items: flex-start;
+    width: 100%;
+    margin-left: 0;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
   .header-divider {
