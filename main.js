@@ -1281,6 +1281,8 @@ let langButtons = document.querySelectorAll(".lang-button");
 const i18nElements = document.querySelectorAll("[data-i18n]");
 const LANG_STORAGE_KEY = "4leafx.language";
 
+document.documentElement.classList.add("js");
+
 const getInitialLanguage = () => {
   try {
     const stored = localStorage.getItem(LANG_STORAGE_KEY);
@@ -1436,6 +1438,24 @@ const sectionObserver = new IntersectionObserver(
 );
 
 sections.forEach((section) => sectionObserver.observe(section));
+
+const animatedSections = document.querySelectorAll("main .section");
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    rootMargin: "0px 0px -10% 0px",
+    threshold: 0.2,
+  }
+);
+
+animatedSections.forEach((section) => revealObserver.observe(section));
 
 applyLanguage(getInitialLanguage());
 setLinkTargets();
