@@ -113,27 +113,28 @@ translations.en = {
     "Understand the card order, combos, and HK house rules.",
   "hub.bigTwo.card2.cta": "View rules",
   "hub.mahjong.rules.title": "Hong Kong Mahjong Rules",
-  "hub.mahjong.rules.subtitle": "Traditional Hong Kong scoring and table flow only.",
-  "hub.mahjong.rules.card1.title": "Setup",
+  "hub.mahjong.rules.subtitle":
+    "Old Hong Kong rules with flowers, winds, and faan-based scoring.",
+  "hub.mahjong.rules.card1.title": "Tile set",
   "hub.mahjong.rules.card1.body":
-    "144-tile set with flowers and seasons. Four players, East is dealer. Each player starts with 13 tiles, dealer starts with 14.",
-  "hub.mahjong.rules.card2.title": "Winning",
+    "144 tiles: suited dots, bamboo, and characters, plus winds, dragons, flowers, and seasons.",
+  "hub.mahjong.rules.card2.title": "Dealing and seats",
   "hub.mahjong.rules.card2.body":
-    "Standard hand is 4 melds plus a pair. Minimum 1 fan to win, with points based on the Hong Kong fan system.",
-  "hub.mahjong.rules.card3.title": "Turn flow",
+    "East is dealer. Each player is dealt 13 tiles, the dealer starts with 14 and discards first.",
+  "hub.mahjong.rules.card3.title": "Flowers and replacements",
   "hub.mahjong.rules.card3.body":
-    "Draw, optionally declare a meld, then discard. Priority is win, then kong or pong, then chow. Dealer keeps the seat on a win.",
+    "Flowers and seasons are set aside for bonus; draw replacement tiles from the wall before discarding.",
   "hub.bigTwo.rules.title": "Hong Kong Big Two Rules",
-  "hub.bigTwo.rules.subtitle": "Classic Hong Kong ranking and play order only.",
-  "hub.bigTwo.rules.card1.title": "Card order",
+  "hub.bigTwo.rules.subtitle": "Classic Hong Kong ranking, combinations, and play order.",
+  "hub.bigTwo.rules.card1.title": "Rank and suit order",
   "hub.bigTwo.rules.card1.body":
-    "Rank is 3 low to 2 high. Suit order is diamonds, clubs, hearts, spades, with the 2 of spades highest overall.",
+    "2 is highest, 3 is lowest. Suits rank spades, hearts, clubs, then diamonds.",
   "hub.bigTwo.rules.card2.title": "Valid hands",
   "hub.bigTwo.rules.card2.body":
-    "Singles, pairs, triples, and 5-card hands. Five-card ranking is straight, flush, full house, four of a kind, straight flush.",
+    "Singles, pairs, triples, and five-card hands: straight, flush, full house, four of a kind, straight flush.",
   "hub.bigTwo.rules.card3.title": "Play flow",
   "hub.bigTwo.rules.card3.body":
-    "Game starts with the 3 of diamonds. Play the same number of cards and beat the current hand or pass. After three passes, the trick resets.",
+    "The player with the 3♦ leads. Each turn must beat the current hand or pass; if all pass, a new trick begins.",
   "rules.eyebrow": "Rules",
   "rules.backToPortal": "Back to Game Portal",
   "rules.nav.bigTwo": "Big Two Rules",
@@ -145,46 +146,69 @@ translations.en = {
   "rules.mahjong.card2.title": "Dealer flow",
   "rules.mahjong.section2.title": "Winning and scoring",
   "rules.mahjong.section2.subtitle":
-    "Minimum 1 fan required under Hong Kong scoring.",
-  "rules.mahjong.card3.title": "Minimum fan",
-  "rules.mahjong.card3.body": "You must have at least 1 fan to win.",
-  "rules.mahjong.card4.title": "Fan system",
-  "rules.mahjong.card4.body": "Scoring follows the Hong Kong fan table.",
-  "rules.mahjong.card5.title": "Dealer continuation",
-  "rules.mahjong.card5.body": "Dealer keeps the seat after a win.",
+    "Four melds plus a pair, with a minimum faan requirement.",
+  "rules.mahjong.card3.title": "Winning hand",
+  "rules.mahjong.card3.body":
+    "Win with 14 tiles: four melds plus a pair, completed by self-draw or a discard.",
+  "rules.mahjong.card4.title": "Meld types",
+  "rules.mahjong.card4.body":
+    "Chow (sequence), pung (triplet), or kong (quad). Chows are suited tiles only.",
+  "rules.mahjong.card5.title": "Minimum faan",
+  "rules.mahjong.card5.body":
+    "You must reach the table minimum faan (often 3) to win.",
+  "rules.mahjong.card6.title": "Payments",
+  "rules.mahjong.card6.body":
+    "Only the winner scores; all others pay based on the hand's faan value.",
   "rules.mahjong.section3.title": "Turn flow",
   "rules.mahjong.section3.subtitle":
-    "Draw, declare, discard with standard priority.",
-  "rules.mahjong.card6.title": "Priority",
-  "rules.mahjong.card6.body": "Win, then kong or pong, then chow.",
+    "Draw, discard, and claim with Hong Kong priority.",
   "rules.mahjong.card7.title": "Draw and discard",
   "rules.mahjong.card7.body":
-    "Draw a tile, declare a meld if applicable, then discard.",
-  "rules.mahjong.card8.title": "Rounds",
+    "Draw from the wall, declare if needed, then discard to keep 13 tiles in hand.",
+  "rules.mahjong.card8.title": "Claim priority",
   "rules.mahjong.card8.body":
-    "Rounds rotate by wind with East as the initial dealer.",
+    "Priority is win, then kong, then pung, then chow (from the left player only).",
+  "rules.mahjong.card9.title": "Kong replacement",
+  "rules.mahjong.card9.body":
+    "After declaring a kong, draw a replacement tile from the end of the wall before discarding.",
+  "rules.mahjong.card10.title": "Interruptions",
+  "rules.mahjong.card10.body":
+    "Play pauses for flowers or seasons, meld claims, winning calls, or robbing a kong.",
+  "rules.mahjong.wiki.title": "Learn more",
+  "rules.mahjong.wiki.subtitle":
+    "Reference the Old Hong Kong mahjong rules overview on Wikipedia.",
+  "rules.mahjong.wiki.cta": "Read the Wikipedia rules",
   "rules.bigTwo.section1.title": "Card order",
   "rules.bigTwo.section1.subtitle": "Hong Kong ranking with suit priority.",
-  "rules.bigTwo.card1.title": "Opening lead",
-  "rules.bigTwo.card1.body": "Game starts with the 3 of diamonds.",
-  "rules.bigTwo.card2.title": "Suit priority",
-  "rules.bigTwo.card2.body": "Diamonds, clubs, hearts, spades.",
+  "rules.bigTwo.card1.title": "Deck and deal",
+  "rules.bigTwo.card1.body":
+    "Use a standard 52-card deck with no jokers. All cards are dealt to four players.",
+  "rules.bigTwo.card2.title": "Rank and suit order",
+  "rules.bigTwo.card2.body":
+    "2 is highest, 3 is lowest. Suits rank spades, hearts, clubs, then diamonds.",
   "rules.bigTwo.section2.title": "Valid hands",
   "rules.bigTwo.section2.subtitle":
     "Standard Hong Kong five-card ranking.",
-  "rules.bigTwo.card3.title": "Comparison",
-  "rules.bigTwo.card3.body":
-    "Beat the current hand with the same number of cards.",
-  "rules.bigTwo.card4.title": "Five-card order",
+  "rules.bigTwo.card3.title": "Opening lead",
+  "rules.bigTwo.card3.body": "The round opens with the 3 of diamonds.",
+  "rules.bigTwo.card4.title": "Comparison",
   "rules.bigTwo.card4.body":
-    "Straight, flush, full house, four of a kind, straight flush.",
+    "Play the same number of cards and beat the current hand using rank and suit.",
+  "rules.bigTwo.card5.title": "Five-card ranking",
+  "rules.bigTwo.card5.body":
+    "Compare by hand type first, then the highest card in the combination.",
   "rules.bigTwo.section3.title": "Play flow",
   "rules.bigTwo.section3.subtitle": "Passes reset the trick.",
-  "rules.bigTwo.card5.title": "Passing",
-  "rules.bigTwo.card5.body": "After three passes, the trick resets.",
-  "rules.bigTwo.card6.title": "Winning",
+  "rules.bigTwo.card6.title": "Passing",
   "rules.bigTwo.card6.body":
-    "First player to shed all cards wins the round.",
+    "If all other players pass, the last player to play starts a new trick.",
+  "rules.bigTwo.card7.title": "Winning",
+  "rules.bigTwo.card7.body":
+    "The first player to play all cards wins the round.",
+  "rules.bigTwo.wiki.title": "Learn more",
+  "rules.bigTwo.wiki.subtitle":
+    "Reference the Big Two rules overview on Wikipedia.",
+  "rules.bigTwo.wiki.cta": "Read the Wikipedia rules",
   "hub.bigTwo.tutorial.title": "Big Two tutorials",
   "hub.bigTwo.tutorial.subtitle": "Step-by-step guides for Traditional HK rules only.",
   "hub.bigTwo.tutorial.card1.title": "Beginner tutorial",
@@ -942,9 +966,103 @@ translations.ja = {
   "hub.footer.bigTwo": "Big Two",
 };
 
+Object.assign(translations["zh-HK"], {
+  "hub.mahjong.rules.title": "香港麻雀規則",
+  "hub.mahjong.rules.subtitle": "舊港式麻雀規則，含花牌、風牌與番數計分。",
+  "hub.mahjong.rules.card1.title": "牌組",
+  "hub.mahjong.rules.card1.body":
+    "共144隻牌：筒、索(條)、萬，加上風牌、三元牌、花牌與季節牌。",
+  "hub.mahjong.rules.card2.title": "派牌與坐位",
+  "hub.mahjong.rules.card2.body": "東家做莊。每人派13隻，莊家有14隻先打。",
+  "hub.mahjong.rules.card3.title": "補花",
+  "hub.mahjong.rules.card3.body":
+    "抽到花牌或季節牌先放旁，從牌山補牌後才打出。",
+  "hub.bigTwo.rules.title": "香港鋤大D規則",
+  "hub.bigTwo.rules.subtitle": "經典港式鋤大D牌序、牌型與出牌流程。",
+  "hub.bigTwo.rules.card1.title": "牌序與花色",
+  "hub.bigTwo.rules.card1.body":
+    "2最大，3最細。花色由大至細：黑桃、紅心、梅花、方塊。",
+  "hub.bigTwo.rules.card2.title": "合法牌型",
+  "hub.bigTwo.rules.card2.body":
+    "單張、對子、三條，以及五張牌：順子、同花、葫蘆、四條、同花順。",
+  "hub.bigTwo.rules.card3.title": "出牌流程",
+  "hub.bigTwo.rules.card3.body":
+    "持有方塊3者先出；每手必須壓過或Pass，全部Pass後重新起手。",
+  "rules.mahjong.section2.title": "和牌與計分",
+  "rules.mahjong.section2.subtitle": "四組面子加一對眼，並達到最低番數。",
+  "rules.mahjong.card3.title": "和牌牌型",
+  "rules.mahjong.card3.body":
+    "用14隻牌和牌：四組面子加一對雀頭，可自摸或食對家出牌。",
+  "rules.mahjong.card4.title": "面子種類",
+  "rules.mahjong.card4.body":
+    "順子(吃)、刻子(碰)、槓子(槓)。順子只限同一花色，例如二三四條(四條)。",
+  "rules.mahjong.card5.title": "最低番數",
+  "rules.mahjong.card5.body": "要達到桌規最低番數（港式常見為3番）先可和牌。",
+  "rules.mahjong.card6.title": "付款方式",
+  "rules.mahjong.card6.body":
+    "只得一個贏家計分，其餘三家按番數付款。",
+  "rules.mahjong.section3.title": "進行",
+  "rules.mahjong.section3.subtitle": "摸牌、打牌及叫牌的港式優先次序。",
+  "rules.mahjong.card7.title": "摸牌與打牌",
+  "rules.mahjong.card7.body":
+    "由牌山摸牌，必要時宣告，再打出一隻保持13隻手牌。",
+  "rules.mahjong.card8.title": "優先次序",
+  "rules.mahjong.card8.body": "和牌優先，其次槓、碰，最後吃（只可食上家）。",
+  "rules.mahjong.card9.title": "槓後補牌",
+  "rules.mahjong.card9.body": "宣告槓後，從牌山尾補一隻再打出。",
+  "rules.mahjong.card10.title": "中斷情況",
+  "rules.mahjong.card10.body":
+    "花牌補牌、碰/吃/槓、胡牌或搶槓都會中斷出牌流程。",
+  "rules.mahjong.wiki.title": "了解更多",
+  "rules.mahjong.wiki.subtitle": "可參考維基百科的舊港式麻雀規則。",
+  "rules.mahjong.wiki.cta": "查看維基百科",
+  "rules.bigTwo.card1.title": "牌組與派牌",
+  "rules.bigTwo.card1.body": "使用52張撲克牌，不用鬼牌，四人全數派完。",
+  "rules.bigTwo.card2.title": "牌序與花色",
+  "rules.bigTwo.card2.body": "2最大，3最細。花色由大至細：黑桃、紅心、梅花、方塊。",
+  "rules.bigTwo.card3.title": "起手",
+  "rules.bigTwo.card3.body": "由方塊3開局。",
+  "rules.bigTwo.card4.title": "比較方式",
+  "rules.bigTwo.card4.body":
+    "同張數出牌，以點數及花色壓過；五張先比牌型再比最高牌。",
+  "rules.bigTwo.card5.title": "五張牌排序",
+  "rules.bigTwo.card5.body": "順子、同花、葫蘆、四條、同花順。",
+  "rules.bigTwo.card6.title": "Pass",
+  "rules.bigTwo.card6.body": "其他三家全部Pass後，上一手玩家重新起手。",
+  "rules.bigTwo.card7.title": "勝負",
+  "rules.bigTwo.card7.body": "最先出清手牌者勝出。",
+  "rules.bigTwo.wiki.title": "了解更多",
+  "rules.bigTwo.wiki.subtitle": "可參考維基百科的鋤大D規則。",
+  "rules.bigTwo.wiki.cta": "查看維基百科",
+});
+
 const langSelect = document.getElementById("lang-select");
 let langButtons = document.querySelectorAll(".lang-button");
 const i18nElements = document.querySelectorAll("[data-i18n]");
+const LANG_STORAGE_KEY = "4leafx.language";
+
+const getInitialLanguage = () => {
+  try {
+    const stored = localStorage.getItem(LANG_STORAGE_KEY);
+    if (stored && translations[stored]) {
+      return stored;
+    }
+  } catch {
+    // Ignore storage errors and fall back to default.
+  }
+  return "en";
+};
+
+const updateLangDropdownOptions = (lang) => {
+  if (!langSelect) {
+    return;
+  }
+  Array.from(langSelect.options).forEach((option) => {
+    const isSelected = option.value === lang;
+    option.hidden = isSelected;
+    option.disabled = isSelected;
+  });
+};
 
 const applyLanguage = (lang) => {
   const dictionary = translations[lang] || translations.en;
@@ -964,6 +1082,12 @@ const applyLanguage = (lang) => {
   });
   if (langSelect) {
     langSelect.value = lang;
+  }
+  updateLangDropdownOptions(lang);
+  try {
+    localStorage.setItem(LANG_STORAGE_KEY, lang);
+  } catch {
+    // Ignore storage errors.
   }
 };
 
@@ -1073,7 +1197,7 @@ const sectionObserver = new IntersectionObserver(
 
 sections.forEach((section) => sectionObserver.observe(section));
 
-applyLanguage("en");
+applyLanguage(getInitialLanguage());
 setLinkTargets();
 
 const initialSection = new URLSearchParams(window.location.search).get("section");
