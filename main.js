@@ -1350,7 +1350,7 @@ const renderLangMenu = (lang) => {
       const item = document.createElement("li");
       const button = document.createElement("button");
       button.type = "button";
-      button.className = "lang-menu-option";
+      button.className = "menu-option";
       button.dataset.lang = option.value;
       button.setAttribute("role", "option");
       button.setAttribute("tabindex", "-1");
