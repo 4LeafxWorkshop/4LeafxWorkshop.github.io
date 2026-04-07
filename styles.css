@@ -40,8 +40,8 @@ body {
 }
 
 :root[data-theme="dark"] body {
-  background: radial-gradient(circle at 10% 20%, rgba(31, 28, 27, 0.8) 0%, transparent 55%),
-    radial-gradient(circle at 80% 10%, rgba(32, 40, 37, 0.8) 0%, transparent 50%), var(--bg);
+  background: radial-gradient(circle at 10% 20%, rgba(70, 66, 62, 0.5) 0%, transparent 55%),
+    radial-gradient(circle at 80% 10%, rgba(55, 70, 63, 0.45) 0%, transparent 50%), var(--bg);
 }
 
 a {
@@ -915,7 +915,7 @@ main {
 
 :root[data-theme="dark"] .theme-toggle-group,
 :root[data-theme="dark"] .menu-trigger {
-  background: var(--surface);
+  background-color: var(--surface);
 }
 
 :root[data-theme="dark"] .site-header {
@@ -935,10 +935,13 @@ main {
 :root[data-theme="dark"] .menu-trigger,
 :root[data-theme="dark"] .lang-dropdown {
   background-image: url("/assets/chevron-down-light.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 18px) 50%;
+  background-size: 14px 10px;
 }
 
 :root[data-theme="dark"] .lang-dropdown {
-  background: var(--surface);
+  background-color: var(--surface);
 }
 
 :root[data-theme="dark"] .link-row {
