@@ -923,6 +923,20 @@ main {
   border-bottom-color: rgba(244, 239, 231, 0.12);
 }
 
+:root[data-theme="dark"] .header-divider,
+:root[data-theme="dark"] .settings-divider {
+  background: rgba(244, 239, 231, 0.2);
+}
+
+:root[data-theme="dark"] .logo {
+  filter: brightness(0) invert(1);
+}
+
+:root[data-theme="dark"] .menu-trigger,
+:root[data-theme="dark"] .lang-dropdown {
+  background-image: url("/assets/chevron-down-light.svg");
+}
+
 :root[data-theme="dark"] .lang-dropdown {
   background: var(--surface);
 }
