@@ -279,6 +279,85 @@ main {
   z-index: 20;
 }
 
+.settings-modal {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 30;
+  transition: opacity 200ms ease;
+}
+
+.settings-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.settings-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(21, 18, 13, 0.25);
+  backdrop-filter: blur(4px);
+}
+
+.settings-card {
+  position: relative;
+  z-index: 1;
+  width: min(360px, 90vw);
+  background: var(--surface);
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  padding: 18px;
+  display: grid;
+  gap: 16px;
+}
+
+.settings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-family: "Fraunces", serif;
+}
+
+.settings-close {
+  border: none;
+  background: transparent;
+  font: inherit;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.settings-close:hover,
+.settings-close:focus-visible {
+  color: var(--accent);
+  background: rgba(47, 122, 99, 0.12);
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.settings-panel {
+  min-width: auto;
+}
+
+.settings-panel .menu-dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  margin-top: 0;
+}
+
 .is-open .menu-dropdown {
   opacity: 1;
   transform: translateY(0);

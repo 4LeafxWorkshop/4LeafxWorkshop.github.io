@@ -1280,7 +1280,8 @@ let langButtons = document.querySelectorAll(".lang-button");
 const i18nElements = document.querySelectorAll("[data-i18n]");
 const LANG_STORAGE_KEY = "4leafx.language";
 const settingsButton = document.getElementById("settings-button");
-const settingsPanel = document.getElementById("settings-panel");
+const settingsModal = document.getElementById("settings-modal");
+const settingsCloseButtons = document.querySelectorAll("[data-settings-close]");
 const langMenuButton = document.getElementById("lang-menu-button");
 const langMenuValue = document.getElementById("lang-menu-value");
 const langMenu = document.getElementById("lang-menu");
@@ -1381,11 +1382,13 @@ const renderThemeMenu = (theme) => {
 };
 
 const setSettingsOpen = (isOpen) => {
-  if (!settingsButton || !settingsPanel) {
+  if (!settingsButton || !settingsModal) {
     return;
   }
   settingsButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
-  settingsPanel.parentElement.classList.toggle("is-open", isOpen);
+  settingsModal.classList.toggle("is-open", isOpen);
+  settingsModal.setAttribute("aria-hidden", isOpen ? "false" : "true");
+  document.body.classList.toggle("no-scroll", isOpen);
 };
 
 const closeSettings = () => setSettingsOpen(false);
@@ -1463,14 +1466,18 @@ langButtons.forEach((button) => {
   });
 });
 
-if (settingsButton && settingsPanel) {
+if (settingsButton && settingsModal) {
   settingsButton.addEventListener("click", () => {
-    const isOpen = settingsPanel.parentElement.classList.contains("is-open");
+    const isOpen = settingsModal.classList.contains("is-open");
     setSettingsOpen(!isOpen);
   });
 
-  document.addEventListener("click", (event) => {
-    if (!settingsPanel.parentElement.contains(event.target)) {
+  settingsCloseButtons.forEach((button) => {
+    button.addEventListener("click", closeSettings);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
       closeSettings();
       setLangMenuOpen(false);
       setThemeMenuOpen(false);
