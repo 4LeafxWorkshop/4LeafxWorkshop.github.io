@@ -223,10 +223,24 @@
             <span class="settings-divider" aria-hidden="true"></span>
             <div class="settings-group">
               <span class="settings-label">Theme</span>
-              <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false">
-                <span id="theme-toggle-text">Light</span>
-                <span class="theme-toggle-pill" aria-hidden="true"></span>
-              </button>
+              <div class="theme-toggle-group" role="group" aria-label="Theme">
+                <button
+                  type="button"
+                  class="theme-toggle-button"
+                  data-theme-toggle="light"
+                  aria-pressed="false"
+                >
+                  Light
+                </button>
+                <button
+                  type="button"
+                  class="theme-toggle-button"
+                  data-theme-toggle="dark"
+                  aria-pressed="false"
+                >
+                  Dark
+                </button>
+              </div>
             </div>
           </div>
         </div>

@@ -1285,8 +1285,7 @@ const settingsCloseButtons = document.querySelectorAll("[data-settings-close]");
 const langMenuButton = document.getElementById("lang-menu-button");
 const langMenuValue = document.getElementById("lang-menu-value");
 const langMenu = document.getElementById("lang-menu");
-const themeToggle = document.getElementById("theme-toggle");
-const themeToggleText = document.getElementById("theme-toggle-text");
+const themeToggleButtons = document.querySelectorAll("[data-theme-toggle]");
 const languageOptions = [
   { value: "en", label: "English" },
   { value: "zh-HK", label: "繁體中文" },
@@ -1411,12 +1410,11 @@ const applyLanguage = (lang) => {
 
 const applyTheme = (theme) => {
   document.documentElement.dataset.theme = theme;
-  if (themeToggleText) {
-    themeToggleText.textContent = theme === "dark" ? "Dark" : "Light";
-  }
-  if (themeToggle) {
-    themeToggle.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
-  }
+  themeToggleButtons.forEach((button) => {
+    const isActive = button.dataset.themeToggle === theme;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", isActive ? "true" : "false");
+  });
   try {
     localStorage.setItem(THEME_STORAGE_KEY, theme);
   } catch {
@@ -1464,12 +1462,18 @@ if (langMenuButton && langMenu) {
   });
 }
 
-if (themeToggle) {
-  themeToggle.addEventListener("click", () => {
-    const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-    applyTheme(nextTheme);
+themeToggleButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const currentTheme = document.documentElement.dataset.theme;
+    const requestedTheme = button.dataset.themeToggle;
+    if (requestedTheme === currentTheme) {
+      const nextTheme = currentTheme === "dark" ? "light" : "dark";
+      applyTheme(nextTheme);
+      return;
+    }
+    applyTheme(requestedTheme);
   });
-}
+});
 
 const navLinks = new Map(
   Array.from(document.querySelectorAll(".nav-links [data-nav]")).map((link) => [
