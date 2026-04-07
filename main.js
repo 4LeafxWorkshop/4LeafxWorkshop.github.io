@@ -1285,9 +1285,8 @@ const settingsCloseButtons = document.querySelectorAll("[data-settings-close]");
 const langMenuButton = document.getElementById("lang-menu-button");
 const langMenuValue = document.getElementById("lang-menu-value");
 const langMenu = document.getElementById("lang-menu");
-const themeMenuButton = document.getElementById("theme-menu-button");
-const themeMenuValue = document.getElementById("theme-menu-value");
-const themeMenu = document.getElementById("theme-menu");
+const themeToggle = document.getElementById("theme-toggle");
+const themeToggleText = document.getElementById("theme-toggle-text");
 const languageOptions = [
   { value: "en", label: "English" },
   { value: "zh-HK", label: "繁體中文" },
@@ -1334,11 +1333,6 @@ const getLangLabel = (lang) => {
   return match ? match.label : lang;
 };
 
-const getThemeLabel = (theme) => {
-  const match = themeOptions.find((option) => option.value === theme);
-  return match ? match.label : theme;
-};
-
 const renderLangMenu = (lang) => {
   if (!langMenu) {
     return;
@@ -1360,26 +1354,6 @@ const renderLangMenu = (lang) => {
     });
 };
 
-const renderThemeMenu = (theme) => {
-  if (!themeMenu) {
-    return;
-  }
-  themeMenu.innerHTML = "";
-  themeOptions
-    .filter((option) => option.value !== theme)
-    .forEach((option) => {
-      const item = document.createElement("li");
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "menu-option";
-      button.dataset.theme = option.value;
-      button.setAttribute("role", "option");
-      button.setAttribute("tabindex", "-1");
-      button.textContent = option.label;
-      item.appendChild(button);
-      themeMenu.appendChild(item);
-    });
-};
 
 const setSettingsOpen = (isOpen) => {
   if (!settingsButton || !settingsModal) {
@@ -1407,19 +1381,6 @@ const setLangMenuOpen = (isOpen) => {
   }
 };
 
-const setThemeMenuOpen = (isOpen) => {
-  if (!themeMenuButton || !themeMenu) {
-    return;
-  }
-  themeMenuButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
-  themeMenu.parentElement.classList.toggle("is-open", isOpen);
-  if (isOpen) {
-    const firstOption = themeMenu.querySelector(".menu-option");
-    if (firstOption) {
-      firstOption.focus();
-    }
-  }
-};
 
 const applyLanguage = (lang) => {
   const dictionary = translations[lang] || translations.en;
@@ -1450,10 +1411,12 @@ const applyLanguage = (lang) => {
 
 const applyTheme = (theme) => {
   document.documentElement.dataset.theme = theme;
-  if (themeMenuValue) {
-    themeMenuValue.textContent = getThemeLabel(theme);
+  if (themeToggleText) {
+    themeToggleText.textContent = theme === "dark" ? "Dark" : "Light";
   }
-  renderThemeMenu(theme);
+  if (themeToggle) {
+    themeToggle.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+  }
   try {
     localStorage.setItem(THEME_STORAGE_KEY, theme);
   } catch {
@@ -1480,7 +1443,7 @@ if (settingsButton && settingsModal) {
     if (event.key === "Escape") {
       closeSettings();
       setLangMenuOpen(false);
-      setThemeMenuOpen(false);
+      // No nested theme menu.
     }
   });
 }
@@ -1501,19 +1464,10 @@ if (langMenuButton && langMenu) {
   });
 }
 
-if (themeMenuButton && themeMenu) {
-  themeMenuButton.addEventListener("click", () => {
-    const isOpen = themeMenu.parentElement.classList.contains("is-open");
-    setThemeMenuOpen(!isOpen);
-  });
-
-  themeMenu.addEventListener("click", (event) => {
-    const target = event.target.closest(".menu-option");
-    if (!target) {
-      return;
-    }
-    applyTheme(target.dataset.theme);
-    setThemeMenuOpen(false);
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    applyTheme(nextTheme);
   });
 }
 

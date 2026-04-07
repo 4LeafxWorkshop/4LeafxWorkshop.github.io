@@ -219,26 +219,10 @@
             <span class="settings-divider" aria-hidden="true"></span>
             <div class="settings-group">
               <span class="settings-label">Theme</span>
-              <div class="lang-select settings-select" role="group" aria-label="Theme">
-                <button
-                  type="button"
-                  class="menu-trigger"
-                  id="theme-menu-button"
-                  aria-haspopup="listbox"
-                  aria-expanded="false"
-                  aria-labelledby="theme-menu-label theme-menu-value"
-                >
-                  <span id="theme-menu-value">Light</span>
-                </button>
-                <ul
-                  class="menu-dropdown"
-                  id="theme-menu"
-                  role="listbox"
-                  aria-labelledby="theme-menu-label"
-                  tabindex="-1"
-                ></ul>
-                <span class="visually-hidden" id="theme-menu-label">Theme</span>
-              </div>
+              <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false">
+                <span id="theme-toggle-text">Light</span>
+                <span class="theme-toggle-pill" aria-hidden="true"></span>
+              </button>
             </div>
           </div>
         </div>

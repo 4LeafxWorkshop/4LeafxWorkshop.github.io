@@ -39,6 +39,11 @@ body {
   min-height: 100vh;
 }
 
+:root[data-theme="dark"] body {
+  background: radial-gradient(circle at 10% 20%, rgba(31, 28, 27, 0.8) 0%, transparent 55%),
+    radial-gradient(circle at 80% 10%, rgba(32, 40, 37, 0.8) 0%, transparent 50%), var(--bg);
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -306,7 +311,6 @@ main {
   position: relative;
   z-index: 1;
   width: min(620px, 92vw);
-  min-height: 260px;
   background: var(--surface);
   border-radius: 24px;
   border: 1px solid var(--border);
@@ -873,4 +877,77 @@ main {
     flex-direction: column;
     align-items: flex-start;
   }
+}
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+  box-shadow: 0 10px 24px rgba(21, 18, 13, 0.08);
+}
+
+.theme-toggle:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(21, 18, 13, 0.12);
+}
+
+.theme-toggle-pill {
+  width: 38px;
+  height: 22px;
+  border-radius: 999px;
+  background: rgba(47, 122, 99, 0.25);
+  position: relative;
+}
+
+.theme-toggle-pill::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  transition: transform 200ms ease;
+}
+
+:root[data-theme="dark"] .theme-toggle-pill::after {
+  transform: translateX(16px);
+}
+.theme-toggle,
+:root[data-theme="dark"] .menu-trigger {
+  background: var(--surface);
+}
+
+:root[data-theme="dark"] .site-header {
+  background: rgba(18, 17, 17, 0.72);
+  border-bottom-color: rgba(244, 239, 231, 0.12);
+}
+
+:root[data-theme="dark"] .lang-dropdown {
+  background: var(--surface);
+}
+
+:root[data-theme="dark"] .link-row {
+  background: var(--surface-2);
+}
+
+:root[data-theme="dark"] .button.ghost {
+  background: rgba(26, 23, 22, 0.6);
+}
+
+:root[data-theme="dark"] .portal-cta {
+  background: rgba(127, 210, 178, 0.18);
+}
+
+:root[data-theme="dark"] .settings-backdrop {
+  background: rgba(9, 8, 8, 0.45);
 }
