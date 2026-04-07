@@ -305,13 +305,13 @@ main {
 .settings-card {
   position: relative;
   z-index: 1;
-  width: min(900px, 96vw);
-  min-height: 360px;
+  width: min(620px, 92vw);
+  min-height: 260px;
   background: var(--surface);
   border-radius: 24px;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
-  padding: 28px;
+  padding: 24px;
   display: grid;
   gap: 16px;
 }
@@ -352,6 +352,30 @@ main {
   min-width: auto;
   display: grid;
   gap: 18px;
+}
+
+.settings-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.settings-divider {
+  width: 1px;
+  background: var(--border);
+  align-self: stretch;
+}
+
+@media (max-width: 720px) {
+  .settings-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .settings-divider {
+    height: 1px;
+    width: 100%;
+  }
 }
 
 .settings-panel .menu-dropdown {
