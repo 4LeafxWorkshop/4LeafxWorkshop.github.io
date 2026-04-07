@@ -305,12 +305,13 @@ main {
 .settings-card {
   position: relative;
   z-index: 1;
-  width: min(840px, 92vw);
+  width: min(900px, 96vw);
+  min-height: 360px;
   background: var(--surface);
   border-radius: 24px;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
-  padding: 18px;
+  padding: 28px;
   display: grid;
   gap: 16px;
 }
@@ -349,6 +350,8 @@ main {
 
 .settings-panel {
   min-width: auto;
+  display: grid;
+  gap: 18px;
 }
 
 .settings-panel .menu-dropdown {
