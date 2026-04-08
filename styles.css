@@ -391,6 +391,7 @@ main {
 
 .settings-group.language-group {
   width: 136px;
+  justify-self: start;
 }
 
 .settings-group.theme-group {
