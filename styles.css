@@ -301,15 +301,15 @@ main {
 .settings-card {
   position: relative;
   z-index: 1;
-  width: min(700px, 94vw);
-  min-height: 390px;
+  width: min(600px, 92vw);
+  min-height: 352px;
   background: var(--surface);
   border-radius: 24px;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
-  padding: 18px 22px 22px;
+  padding: 16px 18px 18px;
   display: grid;
-  gap: 10px;
+  gap: 8px;
 }
 
 .settings-header {
@@ -353,10 +353,10 @@ main {
 
 .settings-row {
   display: grid;
-  grid-template-columns: 212px auto 148px;
-  gap: 14px;
+  grid-template-columns: 184px auto 136px;
+  gap: 12px;
   align-items: start;
-  justify-content: end;
+  justify-content: center;
 }
 
 .settings-divider {
@@ -378,9 +378,10 @@ main {
 
 .settings-panel {
   min-width: 0;
-  padding: 2px 2px 2px;
+  padding: 0;
   display: grid;
-  gap: 8px;
+  gap: 6px;
+  justify-items: center;
 }
 
 .settings-group {
@@ -389,7 +390,11 @@ main {
 }
 
 .settings-group.language-group {
-  width: 212px;
+  width: 184px;
+}
+
+.settings-group.theme-group {
+  width: 136px;
 }
 
 .settings-label {
@@ -822,6 +827,31 @@ main {
   border: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.85);
   box-shadow: 0 10px 24px rgba(21, 18, 13, 0.08);
+}
+
+.card-with-logo {
+  grid-template-columns: 92px minmax(0, 1fr);
+  align-items: start;
+  column-gap: 18px;
+}
+
+.card-logo {
+  width: 92px;
+  height: 92px;
+  border-radius: 24px;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 14px 28px rgba(21, 18, 13, 0.18);
+}
+
+.card-body {
+  display: grid;
+  gap: 12px;
+}
+
+.card-body h3,
+.card-body p {
+  margin: 0;
 }
 
 .settings-stack-button {
