@@ -1282,9 +1282,7 @@ const LANG_STORAGE_KEY = "4leafx.language";
 const settingsButton = document.getElementById("settings-button");
 const settingsModal = document.getElementById("settings-modal");
 const settingsCloseButtons = document.querySelectorAll("[data-settings-close]");
-const langMenuButton = document.getElementById("lang-menu-button");
-const langMenuValue = document.getElementById("lang-menu-value");
-const langMenu = document.getElementById("lang-menu");
+const settingsLangButtons = document.querySelectorAll("[data-settings-lang]");
 const themeToggleButtons = document.querySelectorAll("[data-theme-toggle]");
 const languageOptions = [
   { value: "en", label: "English" },
@@ -1328,33 +1326,6 @@ const getInitialTheme = () => {
   return "light";
 };
 
-const getLangLabel = (lang) => {
-  const match = languageOptions.find((option) => option.value === lang);
-  return match ? match.label : lang;
-};
-
-const renderLangMenu = (lang) => {
-  if (!langMenu) {
-    return;
-  }
-  langMenu.innerHTML = "";
-  languageOptions
-    .filter((option) => option.value !== lang)
-    .forEach((option) => {
-      const item = document.createElement("li");
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "menu-option";
-      button.dataset.lang = option.value;
-      button.setAttribute("role", "option");
-      button.setAttribute("tabindex", "-1");
-      button.textContent = option.label;
-      item.appendChild(button);
-      langMenu.appendChild(item);
-    });
-};
-
-
 const setSettingsOpen = (isOpen) => {
   if (!settingsButton || !settingsModal) {
     return;
@@ -1366,21 +1337,6 @@ const setSettingsOpen = (isOpen) => {
 };
 
 const closeSettings = () => setSettingsOpen(false);
-
-const setLangMenuOpen = (isOpen) => {
-  if (!langMenuButton || !langMenu) {
-    return;
-  }
-  langMenuButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
-  langMenu.parentElement.classList.toggle("is-open", isOpen);
-  if (isOpen) {
-    const firstOption = langMenu.querySelector(".menu-option");
-    if (firstOption) {
-      firstOption.focus();
-    }
-  }
-};
-
 
 const applyLanguage = (lang) => {
   const dictionary = translations[lang] || translations.en;
@@ -1398,10 +1354,11 @@ const applyLanguage = (lang) => {
   langButtons.forEach((button) => {
     button.classList.toggle("active", button.dataset.lang === lang);
   });
-  if (langMenuValue) {
-    langMenuValue.textContent = getLangLabel(lang);
-  }
-  renderLangMenu(lang);
+  settingsLangButtons.forEach((button) => {
+    const isActive = button.dataset.settingsLang === lang;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", isActive ? "true" : "false");
+  });
   try {
     localStorage.setItem(LANG_STORAGE_KEY, lang);
   } catch {
@@ -1441,27 +1398,15 @@ if (settingsButton && settingsModal) {
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       closeSettings();
-      setLangMenuOpen(false);
-      // No nested theme menu.
     }
   });
 }
 
-if (langMenuButton && langMenu) {
-  langMenuButton.addEventListener("click", () => {
-    const isOpen = langMenu.parentElement.classList.contains("is-open");
-    setLangMenuOpen(!isOpen);
+settingsLangButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    applyLanguage(button.dataset.settingsLang);
   });
-
-  langMenu.addEventListener("click", (event) => {
-    const target = event.target.closest(".menu-option");
-    if (!target) {
-      return;
-    }
-    applyLanguage(target.dataset.lang);
-    setLangMenuOpen(false);
-  });
-}
+});
 
 themeToggleButtons.forEach((button) => {
   button.addEventListener("click", () => {

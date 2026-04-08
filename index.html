@@ -350,34 +350,31 @@
           <div class="settings-row">
             <div class="settings-group">
               <span class="settings-label">Language</span>
-              <div class="lang-select settings-select" role="group" aria-label="Language">
-                <button
-                  type="button"
-                  class="menu-trigger"
-                  id="lang-menu-button"
-                  aria-haspopup="listbox"
-                  aria-expanded="false"
-                  aria-labelledby="lang-menu-label lang-menu-value"
-                >
-                  <span id="lang-menu-value">English</span>
+              <div class="settings-stack settings-select" role="group" aria-label="Language">
+                <button type="button" class="settings-stack-button" data-settings-lang="en" aria-pressed="false">
+                  English
                 </button>
-                <ul
-                  class="menu-dropdown"
-                  id="lang-menu"
-                  role="listbox"
-                  aria-labelledby="lang-menu-label"
-                  tabindex="-1"
-                ></ul>
-                <span class="visually-hidden" id="lang-menu-label">Language</span>
+                <button type="button" class="settings-stack-button" data-settings-lang="zh-HK" aria-pressed="false">
+                  繁體中文
+                </button>
+                <button type="button" class="settings-stack-button" data-settings-lang="de" aria-pressed="false">
+                  Deutsch
+                </button>
+                <button type="button" class="settings-stack-button" data-settings-lang="es" aria-pressed="false">
+                  Espanol
+                </button>
+                <button type="button" class="settings-stack-button" data-settings-lang="ja" aria-pressed="false">
+                  日本語
+                </button>
               </div>
             </div>
             <span class="settings-divider" aria-hidden="true"></span>
             <div class="settings-group">
               <span class="settings-label">Theme</span>
-              <div class="theme-toggle-group" role="group" aria-label="Theme">
+              <div class="settings-stack" role="group" aria-label="Theme">
                 <button
                   type="button"
-                  class="theme-toggle-button"
+                  class="settings-stack-button"
                   data-theme-toggle="light"
                   aria-pressed="false"
                 >
@@ -385,7 +382,7 @@
                 </button>
                 <button
                   type="button"
-                  class="theme-toggle-button"
+                  class="settings-stack-button"
                   data-theme-toggle="dark"
                   aria-pressed="false"
                 >
@@ -393,7 +390,7 @@
                 </button>
                 <button
                   type="button"
-                  class="theme-toggle-button"
+                  class="settings-stack-button"
                   data-theme-toggle="contrast"
                   aria-pressed="false"
                 >
