@@ -5,6 +5,7 @@
   --muted: #5d564c;
   --accent: #2f7a63;
   --accent-2: #f1b743;
+  --accent-ink: #ffffff;
   --surface: #ffffff;
   --surface-2: #f2ebe2;
   --border: rgba(21, 18, 13, 0.12);
@@ -18,10 +19,25 @@
   --muted: #c3b9ac;
   --accent: #7fd2b2;
   --accent-2: #f3c86e;
+  --accent-ink: #08110d;
   --surface: #1a1716;
   --surface-2: #24201d;
   --border: rgba(244, 239, 231, 0.16);
   --shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+:root[data-theme="contrast"] {
+  color-scheme: dark;
+  --bg: #040404;
+  --ink: #ffffff;
+  --muted: #f2f2f2;
+  --accent: #00d8ff;
+  --accent-2: #ffe45c;
+  --accent-ink: #001319;
+  --surface: #000000;
+  --surface-2: #101010;
+  --border: rgba(255, 255, 255, 0.45);
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
 }
 
 *,
@@ -42,6 +58,11 @@ body {
 :root[data-theme="dark"] body {
   background: radial-gradient(circle at 10% 20%, rgba(70, 66, 62, 0.5) 0%, transparent 55%),
     radial-gradient(circle at 80% 10%, rgba(55, 70, 63, 0.45) 0%, transparent 50%), var(--bg);
+}
+
+:root[data-theme="contrast"] body {
+  background: radial-gradient(circle at 10% 18%, rgba(0, 216, 255, 0.18) 0%, transparent 42%),
+    radial-gradient(circle at 82% 12%, rgba(255, 228, 92, 0.12) 0%, transparent 36%), var(--bg);
 }
 
 a {
@@ -542,7 +563,7 @@ main {
 
 .button.primary {
   background: var(--accent);
-  color: #ffffff;
+  color: var(--accent-ink);
   box-shadow: 0 12px 24px rgba(47, 122, 99, 0.35);
 }
 
@@ -882,6 +903,7 @@ main {
 .theme-toggle-group {
   display: inline-flex;
   align-items: center;
+  flex-wrap: wrap;
   padding: 6px;
   gap: 6px;
   border-radius: 999px;
@@ -897,6 +919,7 @@ main {
   font-weight: 600;
   padding: 8px 16px;
   border-radius: 999px;
+  min-width: 92px;
   cursor: pointer;
   transition: background 160ms ease, color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
 }
@@ -909,7 +932,7 @@ main {
 
 .theme-toggle-button.is-active {
   background: var(--accent);
-  color: #ffffff;
+  color: var(--accent-ink);
   box-shadow: 0 10px 20px rgba(47, 122, 99, 0.35);
 }
 
@@ -918,9 +941,19 @@ main {
   background-color: var(--surface);
 }
 
+:root[data-theme="contrast"] .theme-toggle-group,
+:root[data-theme="contrast"] .menu-trigger {
+  background-color: var(--surface);
+}
+
 :root[data-theme="dark"] .site-header {
   background: rgba(18, 17, 17, 0.72);
   border-bottom-color: rgba(244, 239, 231, 0.12);
+}
+
+:root[data-theme="contrast"] .site-header {
+  background: rgba(0, 0, 0, 0.9);
+  border-bottom-color: rgba(255, 255, 255, 0.24);
 }
 
 :root[data-theme="dark"] .header-divider,
@@ -928,7 +961,16 @@ main {
   background: rgba(244, 239, 231, 0.2);
 }
 
+:root[data-theme="contrast"] .header-divider,
+:root[data-theme="contrast"] .settings-divider {
+  background: rgba(255, 255, 255, 0.35);
+}
+
 :root[data-theme="dark"] .logo {
+  filter: brightness(0) invert(1);
+}
+
+:root[data-theme="contrast"] .logo {
   filter: brightness(0) invert(1);
 }
 
@@ -940,7 +982,19 @@ main {
   background-size: 14px 10px;
 }
 
+:root[data-theme="contrast"] .menu-trigger,
+:root[data-theme="contrast"] .lang-dropdown {
+  background-image: url("/assets/chevron-down-light.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 18px) 50%;
+  background-size: 14px 10px;
+}
+
 :root[data-theme="dark"] .lang-dropdown {
+  background-color: var(--surface);
+}
+
+:root[data-theme="contrast"] .lang-dropdown {
   background-color: var(--surface);
 }
 
@@ -948,14 +1002,30 @@ main {
   background: var(--surface-2);
 }
 
+:root[data-theme="contrast"] .link-row {
+  background: var(--surface-2);
+}
+
 :root[data-theme="dark"] .button.ghost {
   background: rgba(26, 23, 22, 0.6);
+}
+
+:root[data-theme="contrast"] .button.ghost {
+  background: rgba(255, 255, 255, 0.08);
 }
 
 :root[data-theme="dark"] .portal-cta {
   background: rgba(127, 210, 178, 0.18);
 }
 
+:root[data-theme="contrast"] .portal-cta {
+  background: rgba(0, 216, 255, 0.18);
+}
+
 :root[data-theme="dark"] .settings-backdrop {
   background: rgba(9, 8, 8, 0.45);
+}
+
+:root[data-theme="contrast"] .settings-backdrop {
+  background: rgba(0, 0, 0, 0.7);
 }

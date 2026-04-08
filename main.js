@@ -1297,6 +1297,7 @@ const languageOptions = [
 const themeOptions = [
   { value: "light", label: "Light" },
   { value: "dark", label: "Dark" },
+  { value: "contrast", label: "Contrast" },
 ];
 
 const THEME_STORAGE_KEY = "4leafx.theme";
@@ -1464,13 +1465,7 @@ if (langMenuButton && langMenu) {
 
 themeToggleButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    const currentTheme = document.documentElement.dataset.theme;
     const requestedTheme = button.dataset.themeToggle;
-    if (requestedTheme === currentTheme) {
-      const nextTheme = currentTheme === "dark" ? "light" : "dark";
-      applyTheme(nextTheme);
-      return;
-    }
     applyTheme(requestedTheme);
   });
 });
