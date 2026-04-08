@@ -301,8 +301,8 @@ main {
 .settings-card {
   position: relative;
   z-index: 1;
-  width: min(600px, 92vw);
-  min-height: 352px;
+  width: min(360px, 92vw);
+  min-height: 320px;
   background: var(--surface);
   border-radius: 24px;
   border: 1px solid var(--border);
@@ -353,8 +353,8 @@ main {
 
 .settings-row {
   display: grid;
-  grid-template-columns: 184px auto 136px;
-  gap: 12px;
+  grid-template-columns: 132px auto 104px;
+  gap: 10px;
   align-items: start;
   justify-content: center;
 }
@@ -390,11 +390,11 @@ main {
 }
 
 .settings-group.language-group {
-  width: 184px;
+  width: 132px;
 }
 
 .settings-group.theme-group {
-  width: 136px;
+  width: 104px;
 }
 
 .settings-label {
