@@ -321,7 +321,7 @@ main {
 
 .settings-header h2 {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.32rem;
   font-family: "Fraunces", serif;
 }
 
@@ -337,7 +337,7 @@ main {
   font: inherit;
   color: var(--muted);
   cursor: pointer;
-  padding: 6px 10px;
+  padding: 8px 12px;
   border-radius: 999px;
 }
 
@@ -353,7 +353,7 @@ main {
 
 .settings-row {
   display: grid;
-  grid-template-columns: 124px auto 98px;
+  grid-template-columns: 136px auto 108px;
   gap: 8px;
   align-items: start;
   justify-content: center;
@@ -390,15 +390,15 @@ main {
 }
 
 .settings-group.language-group {
-  width: 124px;
+  width: 136px;
 }
 
 .settings-group.theme-group {
-  width: 98px;
+  width: 108px;
 }
 
 .settings-label {
-  font-size: 0.85rem;
+  font-size: 0.92rem;
   font-weight: 600;
   color: var(--muted);
   text-transform: uppercase;
@@ -821,7 +821,7 @@ main {
 .settings-stack {
   display: grid;
   width: 100%;
-  padding: 6px;
+  padding: 8px;
   gap: 0;
   border-radius: 22px;
   border: 1px solid var(--border);
@@ -860,11 +860,12 @@ main {
   background: transparent;
   color: var(--muted);
   font-weight: 600;
-  padding: 11px 14px;
+  padding: 12px 15px;
   border-radius: 16px;
   min-width: 0;
   width: 100%;
   text-align: left;
+  font-size: 0.98rem;
   cursor: pointer;
   transition: background 160ms ease, color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
 }
