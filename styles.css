@@ -301,7 +301,7 @@ main {
 .settings-card {
   position: relative;
   z-index: 1;
-  width: min(360px, 92vw);
+  width: min(336px, 92vw);
   min-height: 320px;
   background: var(--surface);
   border-radius: 24px;
@@ -353,8 +353,8 @@ main {
 
 .settings-row {
   display: grid;
-  grid-template-columns: 132px auto 104px;
-  gap: 10px;
+  grid-template-columns: 124px auto 98px;
+  gap: 8px;
   align-items: start;
   justify-content: center;
 }
@@ -390,11 +390,11 @@ main {
 }
 
 .settings-group.language-group {
-  width: 132px;
+  width: 124px;
 }
 
 .settings-group.theme-group {
-  width: 104px;
+  width: 98px;
 }
 
 .settings-label {
@@ -831,7 +831,7 @@ main {
 
 .card-with-logo {
   grid-template-columns: 92px minmax(0, 1fr);
-  align-items: start;
+  align-items: center;
   column-gap: 18px;
 }
 
@@ -842,6 +842,7 @@ main {
   display: block;
   object-fit: cover;
   box-shadow: 0 14px 28px rgba(21, 18, 13, 0.18);
+  transform: translateY(-6px);
 }
 
 .card-body {
