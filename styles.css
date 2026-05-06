@@ -647,6 +647,12 @@ main {
   margin-top: 18px;
 }
 
+.article-byline {
+  margin: 12px 0 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
 .article-chip {
   display: inline-flex;
   align-items: center;
