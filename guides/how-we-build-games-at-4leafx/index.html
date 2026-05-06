@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How we build games at 4leafx | 4leafx</title>
+    <meta
+      name="description"
+      content="A practical look at how 4leafx approaches game development, from concept and rules design to prototyping, testing, polish, launch, and live updates."
+    />
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+TC:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="content-page">
+    <header class="site-header">
+      <a class="logo-lockup" href="/">
+        <img src="../../assets/4leafx-logo.svg" alt="4leafx logo" class="logo" />
+        <span class="logo-wordmark">4leafx</span>
+      </a>
+      <div class="header-right">
+        <nav class="nav-links" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/guides/" aria-current="page">Guides</a>
+          <a href="/game-hub/">Game Portal</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="article-hero">
+        <div>
+          <p class="eyebrow">Guide</p>
+          <h1>How we build games at 4leafx</h1>
+          <p class="lede">
+            Game development is part design, part engineering, and part judgement. A good game
+            does not happen because a feature list looks ambitious. It happens because the core
+            idea is clear, the rules are understandable, the systems are testable, and the final
+            experience feels worth returning to. At 4leafx, we build games the same way we build
+            anything else: carefully, with respect for the player’s time, and with enough
+            restraint to let the core idea stay sharp.
+          </p>
+          <div class="article-meta">
+            <span class="article-chip">Concept to launch</span>
+            <span class="article-chip">Systems and testing</span>
+            <span class="article-chip">Player experience</span>
+          </div>
+        </div>
+        <figure class="article-cover">
+          <img src="../../assets/big2-preview.svg" alt="Preview graphic for the Big Two game" />
+        </figure>
+      </section>
+
+      <section class="article-layout">
+        <div class="article-body">
+          <article class="article-section">
+            <h2>1. We start with the core experience</h2>
+            <p>
+              Before we write code or build assets, we decide what the game should feel like. Is it
+              fast and competitive? Calm and strategic? Social and replayable? A game can have a
+              strong theme and still fail if the core experience is muddy. The first job is to define
+              the feeling we want the player to have in the first few minutes and the reason they
+              would want to come back later.
+            </p>
+            <p>
+              That early clarity helps shape the whole project. A card game needs very different
+              decisions from a puzzle game or a digital board game. The mechanics, pacing, visual
+              style, and interface should all support the same goal. If the game is about quick
+              decision-making, the rules need to be readable at a glance. If it is about long-term
+              strategy, the system has to stay deep without becoming confusing.
+            </p>
+            <p>
+              For a game like Big Two, the experience has to feel immediate. Players should
+              recognise the hand hierarchy, understand the turn order, and see how the table is
+              changing without digging through menus. That is the kind of clarity we aim for from
+              the beginning.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>2. Rules come before polish</h2>
+            <p>
+              Good game development begins with rules that actually work. We prototype the logic
+              early so we can see whether the game is fair, clear, and fun before we invest too much
+              time in visuals. A game can look polished and still be dull if the rules do not create
+              meaningful choices. It can also be promising on paper and still fail if the structure
+              is too slow or too complicated to play naturally.
+            </p>
+            <p>
+              That is why we prefer simple early versions. A rough prototype tells the truth faster
+              than a finished-looking mock-up. Once the core loop feels right, we can build outward
+              with more confidence. The point is not to strip away personality. The point is to make
+              sure the personality sits on top of a solid system.
+            </p>
+            <p>
+              We pay special attention to the rules that create tension. In a card game, that can be
+              the opening move, combo resolution, or whether a player should hold a strong hand for
+              later. If the rules create no meaningful trade-off, the game becomes flat. If they
+              create too many trade-offs at once, the game becomes exhausting. The balance lives in
+              the middle.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>3. We design for clarity, not just features</h2>
+            <p>
+              It is easy for a game to collect features. It is harder for those features to work
+              together cleanly. Every added rule, button, animation, or mode creates more cognitive
+              load for the player. That is why we keep asking whether each addition makes the game
+              better or just busier. If a feature does not improve the experience, it is usually
+              better to leave it out.
+            </p>
+            <p>
+              Clarity also matters in the interface. Players should understand what is happening
+              without needing to stop and decode the screen. A clear table layout, readable status
+              indicators, and obvious actions all reduce friction. In a game, friction is not always
+              bad, but confusion is. We try to avoid confusion wherever possible.
+            </p>
+            <p>
+              That means we design the UI around the decisions a player needs to make in the moment.
+              If it is a turn-based game, the current action must be obvious. If there is a timer,
+              the timer must be unmissable without being noisy. If a rule is specific to Hong Kong
+              style Big Two, that rule should be surfaced in the right place instead of hiding in a
+              separate page no one reads.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>4. We prototype the game before we polish it</h2>
+            <p>
+              Game prototypes are useful because they remove everything that is not essential. The
+              first version might be plain, even ugly, but it can still tell us whether the game is
+              worth building. That is important because games are expensive to overbuild. If the core
+              loop is weak, extra art and sound will not fix it. If the loop is strong, a simple
+              prototype is enough to prove the direction.
+            </p>
+            <p>
+              We usually test one mechanic at a time. For a card game, that might mean checking how a
+              hand resolves, whether a player understands valid moves, or how a round resets after a
+              win. By isolating each part, we can see exactly where the friction is coming from.
+              That approach saves time and helps us keep the code and the rules cleaner.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>5. Testing is where the real work shows up</h2>
+            <p>
+              Game testing is not just about finding bugs. It is about checking whether the design
+              survives contact with real people. A mechanic that makes sense to the developer may be
+              unclear to a new player. A rule that feels balanced in theory may become frustrating in
+              play. Testing reveals those gaps quickly, which is why we treat it as part of the build
+              rather than a final cleanup step.
+            </p>
+            <p>
+              We look for points where players hesitate, misunderstand, or lose momentum. Those are
+              usually the parts that need adjustment. Sometimes the fix is small, like improving the
+              wording on a button or moving a rule explanation. Sometimes it means changing the flow
+              of the game itself. Good testing is honest. It helps us cut the wrong ideas before
+              they become expensive.
+            </p>
+            <p>
+              For multiplayer or competitive play, testing also means checking edge cases. What
+              happens if a player disconnects? What if a match ends early? What if the rules are
+              technically correct but the table tempo feels unfair? These are the kinds of questions
+              that determine whether a game feels robust or fragile.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>6. Polish should support the game, not cover for it</h2>
+            <p>
+              Visual polish matters, but it should never be used to hide weak design. Art, sound, and
+              animation are strongest when they reinforce the mechanics. A satisfying sound effect on
+              a card move, a crisp visual response to a turn change, or a clean table state after an
+              action can make a game feel much more complete. The polish is there to help the player
+              read the game and enjoy the interaction.
+            </p>
+            <p>
+              We aim for a style that feels deliberate rather than overloaded. That means choosing
+              the right amount of detail and keeping the presentation readable. The result should
+              feel like a finished game, not a demo dressed up as one. That distinction matters when
+              players spend real time with it.
+            </p>
+            <p>
+              In practice, this is where small touches matter. A clear card highlight, a clean end-of-
+              turn transition, or a subtle state change can do more for the experience than a long
+              animation that slows the table down. If a visual effect gets in the way of the next
+              decision, it is too much.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>7. A good launch is part of the design</h2>
+            <p>
+              Launching a game is not the end of the process. It is the point where the game starts
+              learning from real players. We think about how the game will be introduced, how updates
+              will be handled, and what kind of feedback matters most after release. A strong launch
+              gives players enough context to enjoy the game quickly, while leaving room for the
+              experience to improve over time.
+            </p>
+            <p>
+              That long view matters because games live through repetition. If the game is meant to
+              be played more than once, then balance, pacing, and trust all matter as much as the
+              initial hook. We want players to feel that the game respects them the first time they
+              try it and the tenth time they return to it.
+            </p>
+            <p>
+              After launch, the work becomes iterative. We watch for patterns, listen to feedback,
+              patch real problems, and keep the rules stable enough that players can trust the game
+              while it improves. That is especially important for something like Big Two, where
+              players expect the rules to feel familiar and the digital version to stay faithful to
+              the tradition.
+            </p>
+            <div class="article-links">
+              <a href="/game-hub/">Visit the Game Portal</a>
+              <a href="/guides/what-makes-a-high-quality-3d-print/">See our quality standard</a>
+            </div>
+          </article>
+
+          <article class="article-section">
+            <h2>What this looks like in practice</h2>
+            <p>
+              On a card game project, that process usually means starting with the rule set, building
+              a playable loop, testing how long a round takes, and checking whether players can read
+              the board without help. Once the fundamentals are solid, we refine the interface,
+              tighten the pacing, and add the visual polish that makes the game feel alive without
+              distracting from play.
+            </p>
+            <p>
+              The result we want is simple: a game that respects the rules, respects the player, and
+              still has enough character to feel like it belongs to 4leafx. That balance between
+              clarity and personality is the core of our approach.
+            </p>
+          </article>
+        </div>
+
+        <aside class="article-side">
+          <div class="side-card">
+            <h3>Core rule</h3>
+            <p>If the game is not clear in its earliest form, polish will not save it.</p>
+          </div>
+          <div class="side-card">
+            <h3>Best habit</h3>
+            <p>Prototype early, test with real players, and remove anything that does not improve the experience.</p>
+          </div>
+          <div class="side-card">
+            <h3>Game focus</h3>
+            <p>For Big Two and similar games, clarity, pace, and rule fidelity matter more than feature count.</p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 4leafx. Crafted with luck and focus.</span>
+      <div class="footer-links">
+        <a href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+      </div>
+    </footer>
+  </body>
+</html>
