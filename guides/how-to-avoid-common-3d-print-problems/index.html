@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How to avoid common 3D print problems | 4leafx</title>
+    <meta
+      name="description"
+      content="An informational guide to common 3D print problems like warping, stringing, weak supports, and layer shifts, with practical prevention tips."
+    />
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+TC:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="content-page">
+    <header class="site-header">
+      <a class="logo-lockup" href="/">
+        <img src="../../assets/4leafx-logo.svg" alt="4leafx logo" class="logo" />
+        <span class="logo-wordmark">4leafx</span>
+      </a>
+      <div class="header-right">
+        <nav class="nav-links" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/about/">About</a>
+          <a href="/guides/" aria-current="page">Guides</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="article-hero">
+        <div>
+          <p class="eyebrow">Informational guide</p>
+          <h1>How to avoid common 3D print problems</h1>
+          <p class="lede">
+            Most print failures are not random. They usually come from a small set of predictable
+            issues: poor bed adhesion, bad orientation, weak supports, unstable temperatures, or
+            a file that was never prepared carefully enough. The good news is that these problems
+            can usually be reduced before the print even begins. At 4leafx we treat prevention as
+            part of the build, not as an after-the-fact repair step. If the setup is right, the
+            machine usually has a much easier job.
+          </p>
+          <div class="article-meta">
+            <span class="article-chip">Warping</span>
+            <span class="article-chip">Stringing</span>
+            <span class="article-chip">Layer shifts</span>
+          </div>
+        </div>
+        <figure class="article-cover">
+          <img src="../../assets/guides/design-process.svg" alt="3D print problem prevention illustration" />
+        </figure>
+      </section>
+
+      <section class="article-layout">
+        <div class="article-body">
+          <article class="article-section">
+            <h2>1. Warping starts with temperature control</h2>
+            <p>
+              Warping happens when the material cools unevenly and pulls away from the build surface.
+              It is most noticeable on parts with large flat bases or sharp corners. The usual fix is
+              not a single magic setting. It is a combination of good bed leveling, proper adhesion,
+              and a temperature environment that stays stable enough for the print to bond evenly.
+              Keeping the printer enclosure and room conditions consistent matters more than many new
+              users realize.
+            </p>
+            <p>
+              We also look at the shape of the part. A design with long sharp corners is more likely
+              to lift than one with smoother geometry. When possible, rounding a corner or changing
+              orientation can make a print much easier to complete. The key lesson is that warping is
+              usually a design and setup problem together, not just a material problem.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>2. Stringing is often a retraction and heat issue</h2>
+            <p>
+              Stringing leaves thin trails between parts of the print. It is usually linked to nozzle
+              temperature, retraction settings, travel moves, or wet filament. If the plastic is too
+              hot, it can ooze more than it should. If the material has absorbed moisture, it may behave
+              inconsistently and leave extra wisps behind. A clean print often comes from tuning the
+              basics rather than chasing a complicated fix.
+            </p>
+            <p>
+              We like to dry and store filament properly because it removes one variable from the
+              process. Then we tune retraction and travel behavior as needed. On some models, tiny
+              movements between clustered parts create more opportunities for stringing, so a different
+              orientation can help more than a temperature tweak. Again, the easiest fix is often the
+              most practical one.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>3. Weak supports usually mean the model was oriented badly</h2>
+            <p>
+              A lot of support problems start before slicing. If the model is turned in a way that
+              creates deep overhangs or unstable contact points, the support structure becomes messy
+              and harder to remove. That adds cleanup time and can mark the final surface. A better
+              orientation often reduces the support load dramatically and produces a cleaner finish.
+            </p>
+            <p>
+              We usually ask whether the object can be tilted, split, or simplified before we accept a
+              heavy support structure. This keeps the print cleaner and lowers the chance of damage
+              during removal. Good supports should hold the model up, not fight the model itself. If a
+              support configuration looks too aggressive, that is often a sign the model needs another
+              pass.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>4. Layer shifts are mostly mechanical or stability issues</h2>
+            <p>
+              Layer shifts tend to be more dramatic because they interrupt the whole print path. They
+              can come from loose belts, obstructions, unstable motion, or a part catching the nozzle.
+              If the machine is mechanically unstable, no amount of slicer tuning will fully fix it.
+              That is why maintenance matters. A printer that is clean, calibrated, and inspected
+              regularly is much less likely to surprise you halfway through a build.
+            </p>
+            <p>
+              We keep a simple habit of checking movement, belt tension, and obvious clearances before
+              longer prints. That does not eliminate risk completely, but it lowers it a lot. For
+              larger workshop jobs, prevention is cheaper than restarting a failed print, especially
+              when the part uses material or time that would be difficult to replace.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>5. The best prevention is a slow, honest setup</h2>
+            <p>
+              Most print failures can be reduced by slowing down at the start. Check the model, check
+              the orientation, check the temperatures, and check the printer itself. If the file or
+              the machine feels uncertain, fix that uncertainty before pressing go. That mindset is
+              part of the workshop standard at 4leafx. We would rather spend a few extra minutes on
+              setup than spend hours cleaning up a problem that should have been prevented.
+            </p>
+            <p>
+              That approach also makes the site more useful as content. People are not only looking
+              for products. They are looking for practical knowledge that helps them understand how the
+              work is done. Pages like this build that trust and give the site more depth for readers
+              who want something genuinely informative.
+            </p>
+            <div class="article-links">
+              <a href="/guides/how-we-design-our-3d-prints/">Design workflow</a>
+              <a href="/guides/choosing-the-right-print-size/">Choosing the right size</a>
+            </div>
+          </article>
+        </div>
+
+        <aside class="article-side">
+          <div class="side-card">
+            <h3>Watch first</h3>
+            <p>Temperature, orientation, adhesion, and machine stability cover most beginner failures.</p>
+          </div>
+          <div class="side-card">
+            <h3>Best habit</h3>
+            <p>Do the boring checks before the print starts. They are cheaper than a failed restart.</p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 4leafx. Crafted with luck and focus.</span>
+      <div class="footer-links">
+        <a href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+      </div>
+    </footer>
+  </body>
+</html>

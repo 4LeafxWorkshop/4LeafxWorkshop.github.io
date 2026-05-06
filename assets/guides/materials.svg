@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Materials illustration with PLA, resin, and finish swatches">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f1e5"/>
+      <stop offset="1" stop-color="#eef4f8"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2f7a63"/>
+      <stop offset="1" stop-color="#7fd2b2"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f1b743"/>
+      <stop offset="1" stop-color="#f7de9c"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9c84d8"/>
+      <stop offset="1" stop-color="#c9b8f2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect x="100" y="92" width="1000" height="616" rx="34" fill="#fffdf9" stroke="#dbd2c4"/>
+  <rect x="150" y="160" width="250" height="460" rx="28" fill="#f8f3ea" stroke="#e2d8ca"/>
+  <rect x="195" y="202" width="160" height="160" rx="80" fill="none" stroke="url(#green)" stroke-width="18"/>
+  <path d="M275 168v248" stroke="#d8d1c5" stroke-width="16" stroke-linecap="round"/>
+  <rect x="220" y="476" width="110" height="88" rx="16" fill="url(#gold)"/>
+  <rect x="442" y="160" width="260" height="460" rx="28" fill="#f4f8f6" stroke="#e2d8ca"/>
+  <rect x="490" y="198" width="165" height="230" rx="22" fill="url(#green)"/>
+  <circle cx="572" cy="252" r="40" fill="#fff" opacity="0.35"/>
+  <rect x="485" y="452" width="175" height="92" rx="18" fill="#fff" stroke="#e2d8ca"/>
+  <rect x="515" y="486" width="120" height="14" rx="7" fill="#d8d1c5"/>
+  <rect x="760" y="160" width="300" height="460" rx="28" fill="#f8f1e3" stroke="#e2d8ca"/>
+  <rect x="804" y="204" width="86" height="220" rx="16" fill="url(#violet)"/>
+  <rect x="912" y="204" width="86" height="220" rx="16" fill="url(#gold)"/>
+  <rect x="804" y="448" width="194" height="92" rx="18" fill="#fff" stroke="#e2d8ca"/>
+  <rect x="838" y="484" width="126" height="14" rx="7" fill="#d8d1c5"/>
+  <circle cx="980" cy="564" r="38" fill="url(#green)" opacity="0.35"/>
+</svg>

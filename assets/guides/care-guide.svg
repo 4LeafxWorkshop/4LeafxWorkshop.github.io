@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Care guide illustration with storage and handling">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f1e5"/>
+      <stop offset="1" stop-color="#eef4f1"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2f7a63"/>
+      <stop offset="1" stop-color="#7fd2b2"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f1b743"/>
+      <stop offset="1" stop-color="#f7de9c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect x="92" y="102" width="1016" height="596" rx="34" fill="#fffdf9" stroke="#dbd2c4"/>
+  <rect x="150" y="180" width="250" height="420" rx="28" fill="#f4efe6" stroke="#e2d8ca"/>
+  <rect x="198" y="236" width="154" height="176" rx="20" fill="#fff" stroke="#e2d8ca"/>
+  <path d="M226 382l32-92 36 54 28-36 38 74z" fill="none" stroke="url(#green)" stroke-width="10" stroke-linejoin="round"/>
+  <rect x="224" y="474" width="108" height="76" rx="16" fill="url(#gold)"/>
+  <rect x="448" y="180" width="270" height="420" rx="28" fill="#eef6f2" stroke="#e2d8ca"/>
+  <rect x="486" y="220" width="194" height="52" rx="16" fill="#fff" stroke="#e2d8ca"/>
+  <rect x="486" y="296" width="194" height="52" rx="16" fill="url(#green)"/>
+  <rect x="486" y="372" width="194" height="52" rx="16" fill="#fff" stroke="#e2d8ca"/>
+  <rect x="486" y="448" width="194" height="52" rx="16" fill="url(#gold)"/>
+  <rect x="486" y="524" width="128" height="14" rx="7" fill="#d8d1c5"/>
+  <rect x="762" y="180" width="286" height="420" rx="28" fill="#f8f3ea" stroke="#e2d8ca"/>
+  <rect x="806" y="224" width="200" height="140" rx="20" fill="#fff" stroke="#e2d8ca"/>
+  <rect x="826" y="254" width="160" height="12" rx="6" fill="#d8d1c5"/>
+  <rect x="826" y="282" width="130" height="12" rx="6" fill="#d8d1c5"/>
+  <rect x="826" y="310" width="145" height="12" rx="6" fill="#d8d1c5"/>
+  <circle cx="1006" cy="604" r="38" fill="url(#green)" opacity="0.28"/>
+</svg>

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How we design our 3D prints | 4leafx</title>
+    <meta
+      name="description"
+      content="A practical look at how 4leafx designs 3D prints from sketch to final file, with testing, scale checks, and print-ready decisions."
+    />
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+TC:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="content-page">
+    <header class="site-header">
+      <a class="logo-lockup" href="/">
+        <img src="../../assets/4leafx-logo.svg" alt="4leafx logo" class="logo" />
+        <span class="logo-wordmark">4leafx</span>
+      </a>
+      <div class="header-right">
+        <nav class="nav-links" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/guides/" aria-current="page">Guides</a>
+          <a href="/game-hub/">Game Portal</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="article-hero">
+        <div>
+          <p class="eyebrow">Guide</p>
+          <h1>How we design our 3D prints</h1>
+          <p class="lede">
+            Good 3D print design is not just about making something look interesting on a screen.
+            It is about shaping an object that can actually be printed cleanly, handled safely, and
+            used in the real world. At 4leafx, the design stage is where form, durability, and
+            production constraints all meet. We start with the idea, but we do not stop at the idea.
+            We keep checking whether the model can survive the route from concept to finished part.
+          </p>
+          <div class="article-meta">
+            <span class="article-chip">Design workflow</span>
+            <span class="article-chip">Prototype first</span>
+            <span class="article-chip">Print-ready thinking</span>
+          </div>
+        </div>
+        <figure class="article-cover">
+          <img src="../../assets/guides/design-process.svg" alt="3D print design workflow illustration" />
+        </figure>
+      </section>
+
+      <section class="article-layout">
+        <div class="article-body">
+          <article class="article-section">
+            <h2>1. The brief comes before the model</h2>
+            <p>
+              Every print begins with a question: what is this object for? A display piece, a desk
+              accessory, a prop, or a custom gift all behave differently. If the piece will be
+              handled often, we pay attention to wall thickness and weak points. If it is mostly
+              decorative, we can push detail further and make the silhouette more ambitious. A good
+              brief saves time because it sets the target before any sculpting starts.
+            </p>
+            <p>
+              We also collect reference images and decide what must stay accurate and what can be
+              simplified. The point is not to copy reference material blindly. The point is to
+              identify the parts that give an object its identity. That may be a shape, a panel
+              line, a facial feature, a logo placement, or a repeated surface rhythm. Once that
+              identity is clear, the rest of the design can support it instead of fighting it.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>2. Sketching sets the proportions</h2>
+            <p>
+              We usually start with rough sketches or a quick blockout in 3D. This stage is about
+              proportions rather than detail. We are looking for balance: how wide the base should
+              be, where the visual weight should sit, and whether the piece reads clearly from a
+              distance. A model can be technically correct and still feel off if the proportions are
+              too tall, too busy, or too flat.
+            </p>
+            <p>
+              In the workshop, this is where we make fast decisions about scale. A print that is too
+              large can increase print time and fail more easily. A print that is too small can lose
+              texture and become fragile. We adjust both the design and the target dimensions until
+              the object sits in a range that makes sense for production. This is also where we
+              decide whether the model should be split into parts, because one-piece convenience is
+              not always better than clean assembly.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>3. CAD work turns the sketch into a printable object</h2>
+            <p>
+              Once the shape is settled, the model moves into CAD or sculpting software. This is the
+              part people often imagine as the whole process, but it is really only one stage. We
+              build thickness into thin areas, add tolerances for joints, and remove tiny details
+              that would disappear on the printer anyway. Surface detail is useful only when it can
+              be resolved in the final material and at the final scale.
+            </p>
+            <p>
+              Print orientation matters here as well. A design with a dramatic overhang can look
+              better in a render than in a slicer preview. If the geometry creates excessive
+              supports, visible scars, or unstable layers, we change the structure rather than hope
+              the printer will compensate. We would rather simplify a hidden underside than spend
+              hours cleaning a problem that should have been designed out earlier.
+            </p>
+            <p>
+              A useful rule in the workshop is that the model should already know how it will be
+              built. If a part needs support, we prefer support that is easy to remove. If a seam is
+              unavoidable, we hide it where the eye will not rest. Small decisions like this are what
+              make a print feel thoughtful instead of merely possible.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>4. Test prints expose the truth</h2>
+            <p>
+              No render tells us as much as a test print. A small prototype reveals whether a curve
+              feels right in the hand, whether a socket fits with a little tolerance, and whether a
+              fine surface detail still reads after layer lines appear. We do not treat prototypes as
+              failures. They are the fastest way to discover what the digital version hides.
+            </p>
+            <p>
+              During testing, we measure where the design needs reinforcement, where the edges feel
+              too sharp, and where the visual rhythm breaks. Sometimes the right answer is a tiny
+              adjustment. Sometimes it is a more aggressive redesign. Either way, the prototype gives
+              us a reality check before production begins. That saves material, reduces waste, and
+              keeps the final product more consistent.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>5. The final file is a production decision</h2>
+            <p>
+              A finished model is not just a prettier file. It is a decision about what we are
+              promising the printer, the material, and the person who will receive the object. Before
+              we lock a file, we check scale, orientation, wall thickness, support strategy, and the
+              surface finish the material can realistically achieve. If any of those parts feels
+              uncertain, the file is not ready yet.
+            </p>
+            <p>
+              That is the design philosophy behind 4leafx prints. We want pieces that look like they
+              were imagined carefully, but also built carefully. The best result is when the final
+              object feels inevitable, as if the shape simply had to become physical once the right
+              choices were made. That only happens when design and production are treated as one
+              workflow from the start.
+            </p>
+            <div class="article-links">
+              <a href="/guides/materials-we-use/">Read about materials</a>
+              <a href="/guides/custom-design-process/">See the custom process</a>
+            </div>
+          </article>
+        </div>
+
+        <aside class="article-side">
+          <div class="side-card">
+            <h3>What we look at</h3>
+            <p>Scale, support removal, thickness, assembly, surface detail, and how the object will be handled after printing.</p>
+          </div>
+          <div class="side-card">
+            <h3>Design rule</h3>
+            <p>If the model cannot be printed cleanly, it is not finished yet. The file has to work before it looks polished.</p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 4leafx. Crafted with luck and focus.</span>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/guides/">Guides</a>
+      </div>
+    </footer>
+  </body>
+</html>
