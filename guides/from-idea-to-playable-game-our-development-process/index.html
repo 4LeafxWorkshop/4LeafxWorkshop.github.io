@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>From idea to playable game: our development process | 4leafx</title>
+    <meta
+      name="description"
+      content="A practical guide to how 4leafx turns a game idea into a playable product, using the Big Two project as a real example of rules, prototyping, testing, and launch planning."
+    />
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+TC:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="content-page">
+    <header class="site-header">
+      <a class="logo-lockup" href="/">
+        <img src="../../assets/4leafx-logo.svg" alt="4leafx logo" class="logo" />
+        <span class="logo-wordmark">4leafx</span>
+      </a>
+      <div class="header-right">
+        <nav class="nav-links" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/guides/" aria-current="page">Guides</a>
+          <a href="/game-hub/">Game Portal</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="article-hero">
+        <div>
+          <p class="eyebrow">Game dev</p>
+          <h1>From idea to playable game: our development process</h1>
+          <p class="lede">
+            A game idea on its own is not enough. Plenty of projects begin with a good theme, a
+            clever mechanic, or a memorable world, but the work only becomes real when that idea
+            turns into something a player can actually touch, understand, and return to. At 4leafx,
+            we care about that shift from concept to playability because it is where most of the
+            value is created. Using our Big Two project as a real example, the process starts with
+            rules and player experience, then moves through prototype, testing, iteration, and the
+            careful decisions that make the final game feel trustworthy.
+          </p>
+          <div class="article-meta">
+            <span class="article-chip">Concept to launch</span>
+            <span class="article-chip">Big Two project</span>
+            <span class="article-chip">Rules-first design</span>
+          </div>
+        </div>
+        <figure class="article-cover">
+          <img src="../../assets/big2-preview.svg" alt="Preview graphic for the Big Two game" />
+        </figure>
+      </section>
+
+      <section class="article-layout">
+        <div class="article-body">
+          <article class="article-section">
+            <h2>1. Why game ideas alone are not enough</h2>
+            <p>
+              A game idea is only the beginning. It may be interesting, familiar, or even exciting,
+              but that does not mean it works as a playable product. The gap between a concept and a
+              game is filled with questions that are easy to ignore at the start: How does the player
+              interact with the system? What decisions matter? What makes the loop satisfying after
+              the first five minutes? What stops the project from becoming overcomplicated?
+            </p>
+            <p>
+              In our experience, the earlier those questions are asked, the better the project gets.
+              A good idea should not be protected from scrutiny. It should be shaped by it. That is
+              especially true for a card game like Big Two, where the underlying rules already carry
+              strong expectations. The idea is useful, but the implementation is what makes the game
+              feel real.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>2. Idea and concept stage</h2>
+            <p>
+              At the concept stage, we narrow the idea down until it is specific enough to build. We
+              ask what kind of experience the game should create and who the game is for. For Big
+              Two, the answer was straightforward in one sense and demanding in another. It needed
+              to remain faithful to Hong Kong style rules while also being clear enough to work as a
+              digital product on phone, tablet, and web.
+            </p>
+            <p>
+              That balance matters because not every good game idea is feasible in the same way. Some
+              ideas are too broad. Others are too complex for the team size or the available time.
+              We look at feasibility early: what has to be in version one, what can wait, and what
+              would create unnecessary risk. That kind of scope thinking is not about lowering
+              ambition. It is about preserving the part of the idea that actually makes it valuable.
+            </p>
+            <p>
+              For Big Two, the important concept decisions were simple but strict: keep the familiar
+              hand hierarchy, make the turn structure readable, and make the digital version feel
+              like a respectful implementation rather than a loose interpretation.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>3. Prototyping comes before perfection</h2>
+            <p>
+              Once we understand the concept, we move into prototyping. This is where we build the
+              smallest playable version possible. It does not need to look finished. It needs to
+              answer the most important question: does the game work when a real person interacts
+              with it? If the answer is not yet clear, we have not done enough.
+            </p>
+            <p>
+              Early prototypes are useful because they remove noise. A player does not need a full
+              visual treatment to tell us whether a turn system feels fair, whether the pace is too
+              slow, or whether the rules are understandable. A rough version can reveal more truth
+              than a polished mock-up because it exposes the structure directly.
+            </p>
+            <p>
+              In a project like Big Two, prototyping helps us check things such as opening play,
+              legal moves, pass flow, and how the table resets after a trick ends. Those are not
+              cosmetic details. They are the spine of the game. If the spine is wrong, adding art
+              later will not fix it.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>4. Core development builds the real structure</h2>
+            <p>
+              Core development is where the game becomes a stable system. This is the stage where we
+              build the mechanics, rules handling, interface flow, and the logic that keeps the game
+              consistent. We use practical tools and engines that fit the project, but we do not let
+              the tool dictate the design. The important thing is that the system remains clear and
+              maintainable.
+            </p>
+            <p>
+              For a card game, that means the game has to understand card order, valid combinations,
+              turn order, and the conditions under which a round resets. It also has to present that
+              information in a way the player can read instantly. The best game systems are not the
+              loudest ones. They are the ones that quietly do the right thing every time.
+            </p>
+            <p>
+              During core development, we also think carefully about device fit. A game that will be
+              played on mobile should not depend on tiny interactions or overly dense screens. A web
+              version can use more space, but it still needs to stay readable. The structure of the
+              game has to survive those shifts without feeling like a different product each time it
+              opens.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>5. Iteration and testing shape the final experience</h2>
+            <p>
+              Testing is where the game starts becoming honest. We watch for hesitation, confusion,
+              imbalance, and places where the flow feels slower than it should. Some issues are
+              technical, but many are experiential. A rule can be correct and still feel awkward. A
+              screen can be functional and still be hard to read. A round can be fair and still feel
+              sluggish.
+            </p>
+            <p>
+              That is why we do not treat testing as a final polish step. It is a core part of the
+              build. Feedback helps us decide what to tighten, what to explain better, and what to
+              remove. In practice, iteration often means adjusting card spacing, improving turn
+              feedback, clarifying rule prompts, or simplifying a screen that tries to do too much at
+              once.
+            </p>
+            <p>
+              For Big Two, testing is especially important because the game relies on rhythm. If the
+              feedback is too slow, the match feels heavy. If it is too fast, newer players lose
+              confidence. We want the game to keep its pace without becoming noisy or hard to follow.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>6. Common mistakes in game development</h2>
+            <p>
+              The mistakes that hurt indie projects most often are not mysterious. Over-scoping is one
+              of the biggest. A project can accumulate features faster than it can support them, and
+              the result is usually a game that feels diluted or unfinished. A smaller game with a
+              clear identity is often stronger than a larger game that tries to be everything at
+              once.
+            </p>
+            <p>
+              Skipping testing is another major problem. A team may believe a game is understandable
+              because it makes sense internally, but players do not have the same context. Without
+              testing, the project can drift away from the way it is actually experienced.
+            </p>
+            <p>
+              Focusing too much on visuals too early is also a trap. Good visuals matter, but they do
+              not save weak structure. If the game loop is not working, polishing the interface only
+              makes the mistake more expensive. We prefer to earn the right to polish by proving that
+              the game itself already works.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>7. How our approach at 4leafx is different</h2>
+            <p>
+              Our approach is shaped by how we think about creative work more broadly. We care about
+              meaning, precision, and whether the final result feels worth keeping. That is true for
+              3D printing and it is true for game development. The project should not feel rushed or
+              generic. It should feel intentional.
+            </p>
+            <p>
+              For Big Two, that means respecting the source material while still building a modern
+              experience around it. We are not trying to make the game louder than it needs to be.
+              We are trying to make it clearer, more reliable, and more enjoyable to return to. That
+              balance between creativity and practicality is where the best work usually happens.
+            </p>
+            <p>
+              It also means we care about trust. A player should feel that the rules are consistent,
+              the interface is deliberate, and the game will not waste their time. Those trust
+              signals matter as much as the visuals because they are what make a product feel real.
+            </p>
+            <div class="article-links">
+              <a href="/guides/how-we-build-big-two-at-4leafx/">Read the Big Two article</a>
+              <a href="/game-hub/">Visit the Game Portal</a>
+            </div>
+          </article>
+
+          <article class="article-section">
+            <h2>8. Conclusion</h2>
+            <p>
+              A playable game is not the result of one big creative leap. It is the outcome of a
+              process: concept, scope, prototype, structure, testing, and refinement. The process is
+              slower than jumping straight to polish, but it produces games that feel coherent and
+              worth the player’s time.
+            </p>
+            <p>
+              That is the standard we try to hold at 4leafx. Whether the project is a card game, a
+              3D printed object, or something that blends both digital and physical thinking, the
+              goal is the same: turn an idea into something meaningful, playable, and well made.
+            </p>
+          </article>
+        </div>
+
+        <aside class="article-side">
+          <div class="side-card">
+            <h3>What matters first</h3>
+            <p>Rules fidelity, player clarity, and a small playable version that can be tested early.</p>
+          </div>
+          <div class="side-card">
+            <h3>What we avoid</h3>
+            <p>Over-scoping, visual-first development, and skipping the difficult questions until late.</p>
+          </div>
+          <div class="side-card">
+            <h3>Project example</h3>
+            <p>Big Two is a useful example because its rules are familiar, strict, and easy to get wrong.</p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 4leafx. Crafted with luck and focus.</span>
+      <div class="footer-links">
+        <a href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+      </div>
+    </footer>
+  </body>
+</html>
