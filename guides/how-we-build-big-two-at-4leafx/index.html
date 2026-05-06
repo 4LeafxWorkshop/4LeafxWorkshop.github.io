@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How we build Big Two at 4leafx | 4leafx</title>
+    <meta
+      name="description"
+      content="A detailed look at how 4leafx is building its Hong Kong-style Big Two card game, from rules fidelity and UX design to testing, platforms, and launch planning."
+    />
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+TC:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="content-page">
+    <header class="site-header">
+      <a class="logo-lockup" href="/">
+        <img src="../../assets/4leafx-logo.svg" alt="4leafx logo" class="logo" />
+        <span class="logo-wordmark">4leafx</span>
+      </a>
+      <div class="header-right">
+        <nav class="nav-links" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/guides/" aria-current="page">Guides</a>
+          <a href="/game-hub/">Game Portal</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="article-hero">
+        <div>
+          <p class="eyebrow">Game dev</p>
+          <h1>How we build Big Two at 4leafx</h1>
+          <p class="lede">
+            Big Two is not the kind of game that rewards loose interpretation. The rules are
+            familiar to many players, especially in Hong Kong, and that familiarity creates a high
+            standard. If the digital version gets the ranking wrong, hides the turn flow, or
+            changes the rhythm too much, the whole experience loses trust. That is why we treat the
+            Big Two project as a rules-first build: preserve the real game, then shape the digital
+            experience around it.
+          </p>
+          <div class="article-meta">
+            <span class="article-chip">Hong Kong style</span>
+            <span class="article-chip">Android, iOS, web</span>
+            <span class="article-chip">Rules fidelity</span>
+          </div>
+        </div>
+        <figure class="article-cover">
+          <img src="../../assets/big2-preview.svg" alt="Preview graphic for the Big Two game" />
+        </figure>
+      </section>
+
+      <section class="article-layout">
+        <div class="article-body">
+          <article class="article-section">
+            <h2>1. We start by protecting the rules, not the visuals</h2>
+            <p>
+              The first thing we locked in for Big Two was the rule set. The project is based on the
+              Hong Kong style of the game, which means the ranking, opening lead, and hand
+              hierarchy all have to behave exactly as players expect. The 2 is the highest card, the
+              3 is the lowest, suit order matters, and the opening play starts with the 3 of
+              diamonds. Those details are not decoration. They are the identity of the game.
+            </p>
+            <p>
+              That approach sounds strict, but it is the right way to build a card game that people
+              already know. If we change the rules too early, we stop making Big Two and start making
+              something adjacent to it. Our job is to keep the familiar structure intact while
+              building a smoother digital version around it.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>2. The game has to read instantly on mobile</h2>
+            <p>
+              Big Two is a game of quick decisions, so the interface has to communicate state
+              immediately. A player should be able to see what hand is on the table, what their
+              options are, and whose turn comes next without scanning a cluttered screen. That is
+              especially important on mobile, where one-handed play and smaller screens force the UI
+              to be efficient.
+            </p>
+            <p>
+              We think about touch targets, card spacing, turn indicators, and feedback timing very
+              early. If the interface makes the player pause to decode what is happening, the rhythm
+              of the game suffers. A card game should feel fast even when the player is thinking
+              carefully. Clear UI is what makes that possible.
+            </p>
+            <p>
+              On web, we can use a little more space for context, but the same principle holds: the
+              current state must be obvious. Players should not need to guess whether they can play,
+              pass, or wait. The better the feedback, the closer the digital experience feels to the
+              actual table game.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>3. We design the systems around real Big Two decisions</h2>
+            <p>
+              A good digital card game does more than move cards around. It helps players make the
+              same decisions they would make in person. Big Two is full of those decisions: when to
+              lead, when to hold a strong hand, when to break a combination, when to conserve a
+              higher card for later, and when to let a round reset.
+            </p>
+            <p>
+              That means the game systems have to support readable hand comparison, valid play
+              detection, and fast trick resolution. A player should never be left wondering whether a
+              move is legal. If the game rejects a hand, the reason should be clear. If a stronger
+              hand beats the table, the result should be visually obvious. Clarity here is not just a
+              user experience choice. It is part of rule enforcement.
+            </p>
+            <p>
+              Because Big Two is a shedding game, the turn structure carries a lot of weight. The
+              pace has to stay brisk enough to feel exciting, but not so fast that newer players feel
+              lost. We try to keep the game sharp without making it stressful.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>4. The project needs to work for both experienced and new players</h2>
+            <p>
+              One of the most useful things about a game like Big Two is that it already has a strong
+              cultural identity. Many players know the rules before they ever open the app. At the
+              same time, new players need a way in. That creates a useful design challenge: build for
+              experts without making the game hostile to beginners.
+            </p>
+            <p>
+              Our answer is to keep the core flow simple and make the support layers optional or
+              lightweight. The rules page exists for reference, but the game itself has to explain
+              enough in the moment that the match can continue naturally. The best onboarding for a
+              card game is often a clean first round, not a long tutorial that interrupts play.
+            </p>
+            <p>
+              That balance matters to the brand too. 4leafx is about rare, thoughtful creations, and
+              that includes making a digital product that respects an existing tradition instead of
+              flattening it into something generic.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>5. Cross-platform support changes how we think about launch</h2>
+            <p>
+              Big Two is planned for Android, iOS, and web, which means the product has to feel
+              coherent across different devices without becoming a lowest-common-denominator port.
+              Mobile players need speed and comfort. Web players need readability and room. The game
+              rules stay the same, but the presentation has to adapt to the screen in front of the
+              player.
+            </p>
+            <p>
+              Cross-platform support also affects testing. We have to make sure the same hand
+              behaves the same way whether the player is on a phone or a browser. It sounds obvious,
+              but these are the details that determine whether the product feels stable. A digital
+              card game lives or dies on trust, and trust is built through consistency.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>6. Testing Big Two means checking edge cases, not only happy paths</h2>
+            <p>
+              Card games create a lot of edge cases. What happens when a player tries to play an
+              invalid hand? What happens when a round resets after passes? What happens if a player
+              leaves or disconnects? What if the table state is technically correct but visually
+              confusing? Those are the kinds of questions we look at during testing because they are
+              the questions that shape whether the game feels dependable.
+            </p>
+            <p>
+              Testing also tells us whether the pacing works. Big Two should move quickly, but not so
+              quickly that the player misses what just happened. The right timing makes a card game
+              feel lively. The wrong timing makes it feel chaotic. That balance is one of the main
+              reasons we spend time on prototypes before polishing the interface.
+            </p>
+          </article>
+
+          <article class="article-section">
+            <h2>7. Why this project matters to 4leafx</h2>
+            <p>
+              Big Two matters because it combines culture, systems design, and presentation in one
+              place. It is a game with real rules, real expectations, and a real audience that knows
+              when something feels off. That makes it a strong fit for the way we work. We like
+              projects where details matter and where the final result only feels right if the
+              process was careful from the beginning.
+            </p>
+            <p>
+              The goal is not to modernise Big Two into something unrecognisable. The goal is to make
+              a digital version that feels faithful, clean, and worth coming back to. When the game
+              is finally live, we want it to feel like the same game players already know, just
+              delivered with more polish and more clarity.
+            </p>
+            <div class="article-links">
+              <a href="/big2/">Visit the Big Two project page</a>
+              <a href="/rules/big2-hk/">Read the Hong Kong rules</a>
+            </div>
+          </article>
+
+          <article class="article-section">
+            <h2>What this means in practice</h2>
+            <p>
+              In practical terms, this project is built around a few non-negotiables. The rules stay
+              faithful. The interface stays readable. The pacing stays quick. The launch path stays
+              realistic. And every update needs to improve the experience without losing the familiar
+              shape of the game.
+            </p>
+            <p>
+              That is the kind of discipline indie game development needs. Not every project needs to
+              be bigger. Some projects need to be more exact. Big Two is one of those.
+            </p>
+          </article>
+        </div>
+
+        <aside class="article-side">
+          <div class="side-card">
+            <h3>Project focus</h3>
+            <p>Hong Kong style Big Two with the familiar ranking, opening lead, and hand hierarchy.</p>
+          </div>
+          <div class="side-card">
+            <h3>Launch target</h3>
+            <p>Android, iOS, and web support are planned for the release path.</p>
+          </div>
+          <div class="side-card">
+            <h3>Design rule</h3>
+            <p>The rules stay faithful first. The interface and pacing are built around that.</p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 4leafx. Crafted with luck and focus.</span>
+      <div class="footer-links">
+        <a href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+      </div>
+    </footer>
+  </body>
+</html>
